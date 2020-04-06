@@ -26,7 +26,7 @@ var _years = 3;
 * Variable mutation and type coercion
 */
 
-var firstName = 'Jhon';
+/*var firstName = 'Jhon';
 var age = 28;
 
 console.log(firstName + ' ' + age);
@@ -45,4 +45,12 @@ job = 'driver';
 alert(firstName + ' is a ' + job + '. Is he married? ' + isMarried);
 
 var lastName = prompt('What is his last name?');
-console.log(lastName);
+console.log(lastName);*/
+
+/**********************
+* Basic operators
+*/
+
+var yearJohn = 2018 - 28;
+
+console.log(yearJohn);
