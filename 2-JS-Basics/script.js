@@ -13,4 +13,5 @@ console.log(job);
 job = 'Teacher';
 console.log(job);
 
+//Variable naming rules
 var _years = 3;
