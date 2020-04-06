@@ -43,3 +43,6 @@ age = 'twenty eight';
 job = 'driver';
 
 alert(firstName + ' is a ' + job + '. Is he married? ' + isMarried);
+
+var lastName = prompt('What is his last name?');
+console.log(lastName);
