@@ -110,3 +110,4 @@ heightJohn = 40;
 bmiMark = massMark / (heightMark *= heightMark);
 bmiJohn = massJohn / (heightJohn *= heightJohn);
 console.log(bmiMark, bmiJohn);
+console.log('Is Mark\'s BMI higher than John\'s? ' + (bmiMark > bmiJohn));
