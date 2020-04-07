@@ -225,3 +225,8 @@ switch (true) {
 function calculateAge(birthYear) {
     return 2018 - birthYear;
 }
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
