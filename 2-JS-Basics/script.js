@@ -336,3 +336,5 @@ var john = {
 };
 console.log(john.firstName);
 console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
