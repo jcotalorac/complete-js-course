@@ -327,7 +327,7 @@ console.log(tips, totals);*/
 */
 
 // Object literal
-var john = {
+/*var john = {
     firstName: 'John',
     lastName: 'Smith',
     birthYear: 1990,
@@ -349,4 +349,17 @@ var jane = new Object();
 jane.name = 'Jane';
 jane.birthYear = 1969;
 jane['lastName'] = 'Smith';
-console.log(jane);
+console.log(jane);*/
+
+/************************************
+* Methods for objects
+*/
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
