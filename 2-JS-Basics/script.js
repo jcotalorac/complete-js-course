@@ -277,7 +277,7 @@ console.log(whatDoYouDo('retired', 'Mark'));*/
 * Arrays
 */
 
-var names = ['John', 'Mark', 'Jane'];
+/*var names = ['John', 'Mark', 'Jane'];
 var years = new Array(1990, 1969, 1948);
 
 console.log(names[0]);
@@ -301,4 +301,23 @@ console.log(john);
 console.log(john.indexOf(23));
 
 var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
-console.log(isDesigner);
+console.log(isDesigner);*/
+
+/************************************
+* Coding challenge 3
+*/
+var bills = [124, 48, 268];
+
+function calculateTip(billAmount) {
+    if(billAmount < 50) {
+        return 20/100;
+    } else if (billAmount >= 50 && billAmount < 200) {
+        return 15/100;
+    } else {
+        return 10/100;
+    }
+}
+
+var tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
+var totals = [bills[0] * (1 + tips[0]), bills[1] * (1 + tips[1]), bills[2] * (1 + tips[2])];
+console.log(tips, totals);
