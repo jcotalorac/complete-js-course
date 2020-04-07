@@ -146,7 +146,7 @@ if (age < 13) {
 * Ternary operator and switch statements
 */
 
-var firstName = 'John';
+/*var firstName = 'John';
 var age = 22;
 
 age >= 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
@@ -168,4 +168,18 @@ switch (job) {
         break;
     default:
         console.log(firstName + ' does something else.');
+}*/
+
+/**************************************
+* Truthy and falsy values
+*/
+
+// Falsy values: undefined, null, 0, '', NaN
+
+var height;
+
+if (height) {
+    console.log('Variable is defined');
+} else {
+    console.log('Variable has NOT been defined');
 }
