@@ -363,9 +363,9 @@ var john = {
     job: 'teacher',
     isMarried: false,
     calcAge: function() {
-        return 2018 - this.birthYear;
+        this.age = 2018 - this.birthYear;
     }
 };
 
-john.age = john.calcAge();
+john.calcAge();
 console.log(john);
