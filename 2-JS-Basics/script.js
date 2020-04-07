@@ -335,3 +335,4 @@ var john = {
     isMarried: false
 };
 console.log(john.firstName);
+console.log(john['lastName']);
