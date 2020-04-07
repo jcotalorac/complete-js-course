@@ -211,7 +211,7 @@ switch (true) {
     case johnAverage > mikeAverage:
         console.log('Winner is John');
         break;
-    case mikeAverage > johnAverage:
+    case mikeAverage >  johnAverage:
         console.log('Winner is Mike');
         break;
     default:
