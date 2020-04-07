@@ -222,7 +222,7 @@ switch (true) {
 * Functions
 */
 
-function calculateAge(birthYear) {
+/*function calculateAge(birthYear) {
     return 2018 - birthYear;
 }
 
@@ -245,4 +245,18 @@ function yearsUntilRetirement(year, firstName) {
 
 yearsUntilRetirement(1990, 'John');
 yearsUntilRetirement(1948, 'Mike');
-yearsUntilRetirement(1969, 'Jane');
+yearsUntilRetirement(1969, 'Jane');*/
+
+/*********************************
+* Function statements and expressions
+*/
+
+// Function declaration
+function whatDoYouDo(job, firstName) {
+    
+}
+
+// FUnction expression
+var whatDoYouDo = function(job, firstName) {
+    
+}
