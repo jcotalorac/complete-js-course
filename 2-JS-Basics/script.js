@@ -439,6 +439,8 @@ for (var i = 0; i < john.length; i++) {
 var john = {
     bills: [124, 48, 268, 180, 42],
     calcTip: function() {
+        this.tips = [];
+        this.totals = [];
         for (var i = 0; i < this.bills.length; i++) {
             var percentage;
             if(this.bills[i] < 50) {
