@@ -81,7 +81,7 @@ console.log(typeof x);*/
 * Operator precedence
 */
 
-var now = 2018;
+/*var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
 
@@ -96,4 +96,17 @@ console.log(average);
 // Multiple assignments
 var x, y;
 x = y = (3 + 5) * 4 - 6; // 26
-console.log(x, y);
+console.log(x, y);*/
+
+/*******************************
+* CODING CHALLENGE
+*/
+
+var bmiMark, bmiJohn, massMark, massJohn, heightMark, heightJohn;
+massMark = 10;
+heightMark = 20;
+massJohn = 30;
+heightJohn = 40;
+bmiMark = massMark / (heightMark *= heightMark);
+bmiJohn = massJohn / (heightJohn *= heightJohn);
+console.log(bmiMark, bmiJohn);
