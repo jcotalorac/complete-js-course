@@ -92,3 +92,8 @@ var ageJohn = now - yearJohn;
 var ageMark = 35;
 var average = (ageJohn + ageMark) / 2;
 console.log(average);
+
+// Multiple assignments
+var x, y;
+x = y = (3 + 5) * 4 - 6; // 26
+console.log(x, y);
