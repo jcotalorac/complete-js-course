@@ -361,5 +361,10 @@ var john = {
     birthYear: 1990,
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     job: 'teacher',
-    isMarried: false
+    isMarried: false,
+    calcAge: function(year) {
+        return 2018 - year;
+    }
 };
+
+console.log(john.calcAge(1990));
