@@ -306,7 +306,7 @@ console.log(isDesigner);*/
 /************************************
 * Coding challenge 3
 */
-var bills = [124, 48, 268];
+/*var bills = [124, 48, 268];
 
 function calculateTip(billAmount) {
     if(billAmount < 50) {
@@ -320,4 +320,18 @@ function calculateTip(billAmount) {
 
 var tips = [calculateTip(bills[0]), calculateTip(bills[1]), calculateTip(bills[2])];
 var totals = [bills[0] * (1 + tips[0]), bills[1] * (1 + tips[1]), bills[2] * (1 + tips[2])];
-console.log(tips, totals);
+console.log(tips, totals);*/
+
+/********************************
+* Objects
+*/
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+console.log(john);
