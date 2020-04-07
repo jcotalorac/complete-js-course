@@ -355,7 +355,7 @@ console.log(jane);*/
 * Methods for objects
 */
 
-var john = {
+/*var john = {
     firstName: 'John',
     lastName: 'Smith',
     birthYear: 1990,
@@ -368,4 +368,30 @@ var john = {
 };
 
 john.calcAge();
-console.log(john);
+console.log(john);*/
+
+/**********************************
+* Coding challenge 4
+*/
+
+var john = {
+    name: 'John',
+    mass: 10,
+    height: 20,
+    calcBMI: function(){
+        this.bmi = this.mass / (this.height *= this.height);
+    }
+};
+
+var mark = {
+    name: 'Mark',
+    mass: 30,
+    height: 40,
+    calcBMI: function(){
+        this.bmi = this.mass / (this.height *= this.height);
+    }
+};
+
+john.calcBMI();
+mark.calcBMI();
+console.log(john.bmi > mark.bmi ? 'John has greater bmi': mark.bmi > john.bmi ? 'Mark has greater bmi' : 'Same bmi');
