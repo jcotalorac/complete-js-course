@@ -178,7 +178,7 @@ switch (job) {
 
 var height;
 
-height = 0;
+height = '';
 if (height || height === 0) {
     console.log('Variable is defined');
 } else {
