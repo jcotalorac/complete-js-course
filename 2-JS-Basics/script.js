@@ -178,6 +178,7 @@ switch (job) {
 
 var height;
 
+height = 23;
 if (height) {
     console.log('Variable is defined');
 } else {
