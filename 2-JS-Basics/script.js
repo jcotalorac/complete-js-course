@@ -374,7 +374,7 @@ console.log(john);*/
 * Coding challenge 4
 */
 
-var john = {
+/*var john = {
     name: 'John',
     mass: 10,
     height: 20,
@@ -394,4 +394,18 @@ var mark = {
 
 john.calcBMI();
 mark.calcBMI();
-console.log(john.bmi > mark.bmi ? 'John has greater bmi': mark.bmi > john.bmi ? 'Mark has greater bmi' : 'Same bmi');
+console.log(john.bmi > mark.bmi ? 'John has greater bmi': mark.bmi > john.bmi ? 'Mark has greater bmi' : 'Same bmi');*/
+
+/****************************************
+* Loops and iteration
+*/
+
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+for (var i = 0; i < john.length; i++) {
+    console.log(john[i]);
+}
