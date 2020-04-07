@@ -287,3 +287,8 @@ console.log(names.length);
 names[1] = 'Ben';
 names[5] = 'Mary';
 console.log(names);
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+console.log(john);
