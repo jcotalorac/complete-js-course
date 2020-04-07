@@ -176,7 +176,7 @@ switch (job) {
 
 // Falsy values: undefined, null, 0, '', NaN
 
-var height;
+/*var height;
 
 height = 23;
 if (height || height === 0) {
@@ -188,4 +188,32 @@ if (height || height === 0) {
 // Equality operators
 if (height == '23') {
     console.log('The == operator does type coercion');
+}*/
+
+/**********************************
+* Coding challenge 2
+*/
+
+var johnScore1, johnScore2, johnScore3, mikeScore1, mikeScore2, mikeScore3, johnAverage, mikeAverage;
+
+johnScore1 = 89;
+johnScore2 = 120;
+johnScore3 = 103;
+
+mikeScore1 = 116;
+mikeScore2 = 94;
+mikeScore3 = 123;
+
+johnAverage = (johnScore1 + johnScore2 + johnScore3) / 3;
+mikeAverage = (mikeScore1 + mikeScore2 + mikeScore3) / 3;
+
+switch (true) {
+    case johnAverage > mikeAverage:
+        console.log('Winner is John');
+        break;
+    case mikeAverage > johnAverage:
+        console.log('Winner is Mike');
+        break;
+    default:
+        console.log('It\'s a draw');
 }
