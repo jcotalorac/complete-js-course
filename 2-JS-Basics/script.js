@@ -424,3 +424,10 @@ for (var i = 0; i < john.length; i++) {
     }
     console.log(john[i]);
 }
+
+for (var i = 0; i < john.length; i++) {
+    if(typeof john[i] !== 'string') {
+        break;
+    }
+    console.log(john[i]);
+}
