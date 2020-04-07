@@ -102,7 +102,7 @@ console.log(x, y);*/
 * CODING CHALLENGE
 */
 
-var bmiMark, bmiJohn, massMark, massJohn, heightMark, heightJohn;
+/*var bmiMark, bmiJohn, massMark, massJohn, heightMark, heightJohn;
 massMark = 10;
 heightMark = 20;
 massJohn = 30;
@@ -110,4 +110,15 @@ heightJohn = 40;
 bmiMark = massMark / (heightMark *= heightMark);
 bmiJohn = massJohn / (heightJohn *= heightJohn);
 console.log(bmiMark, bmiJohn);
-console.log('Is Mark\'s BMI higher than John\'s? ' + (bmiMark > bmiJohn));
+console.log('Is Mark\'s BMI higher than John\'s? ' + (bmiMark > bmiJohn));*/
+
+/*******************************
+* If / else statements
+*/
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firstName + ' is married!');
+}
