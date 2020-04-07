@@ -400,9 +400,9 @@ console.log(john.bmi > mark.bmi ? 'John has greater bmi': mark.bmi > john.bmi ? 
 * Loops and iteration
 */
 
-for (var i = 0; i < 10; i++) {
+/*for (var i = 0; i < 10; i++) {
     console.log(i);
-}
+}*/
 
 /*var john = ['John', 'Smith', 1990, 'designer', false];
 
@@ -416,7 +416,7 @@ while(i < john.length) {
     i++;
 }*/
 
-var john = ['John', 'Smith', 1990, 'designer', false];
+/*var john = ['John', 'Smith', 1990, 'designer', false];
 
 for (var i = 0; i < john.length; i++) {
     if(typeof john[i] !== 'string') {
@@ -430,4 +430,29 @@ for (var i = 0; i < john.length; i++) {
         break;
     }
     console.log(john[i]);
-}
+}*/
+
+/************************************
+* Coding challenge 5
+*/
+
+var john = {
+    bills: [124, 48, 268, 180, 42],
+    calcTip: function() {
+        for (var i = 0; i < this.bills.length; i++) {
+            var percentage;
+            if(this.bills[i] < 50) {
+                percentage = 20/100;
+            } else if (this.bills[i] >= 50 && this.bills[i] < 200) {
+                percentage = 15/100;
+            } else {
+                percentage = 10/100;
+            }
+            this.tips[i] = this.bills[i] * percentage;
+            this.totals[i] = this.bills[i] + this.tips[i];
+        }
+    }
+};
+
+john.calcTip();
+console.log(john);
