@@ -194,7 +194,7 @@ if (height == '23') {
 * Coding challenge 2
 */
 
-var johnScore1, johnScore2, johnScore3, mikeScore1, mikeScore2, mikeScore3, johnAverage, mikeAverage;
+/*var johnScore1, johnScore2, johnScore3, mikeScore1, mikeScore2, mikeScore3, johnAverage, mikeAverage;
 
 johnScore1 = 89;
 johnScore2 = 120;
@@ -216,4 +216,12 @@ switch (true) {
         break;
     default:
         console.log('It\'s a draw');
+}*/
+
+/************************************************
+* Functions
+*/
+
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
 }
