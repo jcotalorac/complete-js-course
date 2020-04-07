@@ -338,3 +338,7 @@ console.log(john.firstName);
 console.log(john['lastName']);
 var x = 'birthYear';
 console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
