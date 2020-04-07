@@ -295,4 +295,5 @@ john.unshift('Mr.');
 console.log(john);
 
 john.pop();
+john.shift();
 console.log(john);
