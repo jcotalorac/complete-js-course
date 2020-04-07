@@ -298,4 +298,4 @@ john.pop();
 john.shift();
 console.log(john);
 
-console.log(john.indexOf(1990));
+console.log(john.indexOf(23));
