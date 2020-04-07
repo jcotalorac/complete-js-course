@@ -299,3 +299,6 @@ john.shift();
 console.log(john);
 
 console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
