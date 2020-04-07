@@ -179,7 +179,7 @@ switch (job) {
 var height;
 
 height = 0;
-if (height) {
+if (height || height === 0) {
     console.log('Variable is defined');
 } else {
     console.log('Variable has NOT been defined');
