@@ -42,5 +42,6 @@ function first() {
 
 function third() {
     var d = 'John';
-    console.log(c);
+    //console.log(c);
+    console.log(a + d);
 }
