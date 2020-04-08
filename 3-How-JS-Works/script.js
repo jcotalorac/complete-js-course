@@ -18,6 +18,7 @@ var age = 23;
 console.log(age);
 
 function foo() {
+    console.log(age);
     var age = 65;
     console.log(age);
 }
