@@ -63,6 +63,11 @@ var john = {
     yearOfBirth: 1990,
     calculateAge: function() {
         console.log(this);
+        
+        function innerFunction() {
+            console.log(this);
+        }
+        innerFunction();
     }
 };
 
