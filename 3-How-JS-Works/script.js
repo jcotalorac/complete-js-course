@@ -27,7 +27,7 @@ console.log(age);*/
 
 // Scoping
 
-var a = 'Hello!';
+/*var a = 'Hello!';
 first();
 
 function first() {
@@ -44,4 +44,9 @@ function third() {
     var d = 'John';
     //console.log(c);
     console.log(a + d);
-}
+}*/
+
+///////////////
+// 'This' keyword
+
+console.log(this);
