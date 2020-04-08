@@ -51,9 +51,19 @@ function third() {
 
 //console.log(this);
 
-calculateAge(1985);
+/*calculateAge(1985);
 
 function calculateAge(year) {
     console.log(2016 - year);
     console.log(this);
-}
+}*/
+
+var john = {
+    name: 'John',
+    yearOfBirth: 1990,
+    calculateAge: function() {
+        console.log(this);
+    }
+};
+
+john.calculateAge();
