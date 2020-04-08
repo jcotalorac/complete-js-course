@@ -1,7 +1,7 @@
 //////////////////////////////
 // Hoisting
 
-calculateAge(1965);
+/*calculateAge(1965);
 
 function calculateAge(year) {
     console.log(2016 - year);
@@ -23,4 +23,24 @@ function foo() {
     console.log(age);
 }
 foo();
-console.log(age);
+console.log(age);*/
+
+// Scoping
+
+var a = 'Hello!';
+first();
+
+function first() {
+    var b = 'Hi!';
+    second();
+    
+    function second() {
+        var c = 'Hey!';
+        third();
+    }
+}
+
+function third() {
+    var d = 'John';
+    console.log(c);
+}
