@@ -72,3 +72,10 @@ var john = {
 };
 
 john.calculateAge();
+
+var mike = {
+    name: 'Mike',
+    yearOfBirht: 1984
+};
+
+mike.calculateAge = john.calculateAge;
