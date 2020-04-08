@@ -64,10 +64,10 @@ var john = {
     calculateAge: function() {
         console.log(this);
         
-        function innerFunction() {
+        /*function innerFunction() {
             console.log(this);
         }
-        innerFunction();
+        innerFunction();*/
     }
 };
 
@@ -79,3 +79,4 @@ var mike = {
 };
 
 mike.calculateAge = john.calculateAge;
+mike.calculateAge();
