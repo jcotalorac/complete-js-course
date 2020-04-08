@@ -15,3 +15,4 @@ var retirement = function(year) {
 
 console.log(age);
 var age = 23;
+console.log(age);
