@@ -54,6 +54,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     document.getElementById('current-' + activePlayer).textContent = '0';
     if(scores[activePlayer] >= 20) {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        document.querySelector('.dice').style.display = 'none';
     } else {
         nextPlayer();    
     }
