@@ -38,8 +38,10 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     diceDOM.src = 'dice-' + dice + '.png';
     
     if (dice !== 1) {
-        document.getElementById('current-' + activePlayer).textContent = dice;
+        roundScore += dice;
+        document.getElementById('current-' + activePlayer).textContent = roundScore;
     } else {
+        roundScore = 0;
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     }
 });
