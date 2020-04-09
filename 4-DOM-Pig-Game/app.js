@@ -51,8 +51,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 });
 
 document.querySelector('.btn-hold').addEventListener('click', function(){
+    scores[activePlayer] += roundScore;
     document.getElementById('score-' + activePlayer).textContent =
-    document.getElementById('current-' + activePlayer).textContent;
+    scores[activePlayer];
     document.getElementById('current-' + activePlayer).textContent = '0';
     document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
