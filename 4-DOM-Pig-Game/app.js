@@ -43,6 +43,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     } else {
         roundScore = 0;
         document.getElementById('current-' + activePlayer).textContent = roundScore;
+        document.querySelector('.player-' + activePlayer + '-panel').className = 'player-' + activePlayer + '-panel';
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+        document.querySelector('.player-' + activePlayer + '-panel').className = 'player-' + activePlayer + '-panel active';
     }
 });
