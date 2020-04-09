@@ -21,6 +21,11 @@ console.log(x);
 
 document.querySelector('.dice').style.display = 'none';
 
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
 function btn() {
     console.log('Callback with external function');
 }
