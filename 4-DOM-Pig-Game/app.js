@@ -46,5 +46,6 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
         document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+        document.querySelector('.dice').style.display = 'none';
     }
 });
