@@ -57,5 +57,6 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
         document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+    roundScore = 0;
     
 });
