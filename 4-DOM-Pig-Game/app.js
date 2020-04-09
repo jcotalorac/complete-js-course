@@ -42,6 +42,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.getElementById('current-' + activePlayer).textContent = roundScore;
     } else {
         roundScore = 0;
+        document.getElementById('current-' + activePlayer).textContent = roundScore;
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     }
 });
