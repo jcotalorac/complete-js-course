@@ -52,7 +52,11 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     document.getElementById('score-' + activePlayer).textContent =
     scores[activePlayer];
     document.getElementById('current-' + activePlayer).textContent = '0';
-    nextPlayer();
+    if(scores[activePlayer] >= 20) {
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+    } else {
+        nextPlayer();    
+    }
     roundScore = 0;    
 });
 
