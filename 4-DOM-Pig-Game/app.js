@@ -49,3 +49,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.querySelector('.dice').style.display = 'none';
     }
 });
+
+document.querySelector('.btn-hold').addEventListener('click', function(){
+    document.getElementById('score-' + activePlayer).textContent =
+    document.getElementById('current-' + activePlayer).textContent;
+});
