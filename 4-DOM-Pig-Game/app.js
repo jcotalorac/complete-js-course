@@ -27,4 +27,6 @@ function btn() {
     console.log('Callback with external function');
 }
 
-document.querySelector('.btn-roll').addEventListener('click', btn);
+document.querySelector('.btn-roll').addEventListener('click', function(){
+    console.log('Callback with an anonymous function');
+});
