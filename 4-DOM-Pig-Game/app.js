@@ -43,10 +43,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     } else {
         roundScore = 0;
         document.getElementById('current-' + activePlayer).textContent = roundScore;
-        document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-        document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
-        document.querySelector('.dice').style.display = 'none';
+        nextPlayer();
     }
 });
 
@@ -55,9 +52,13 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     document.getElementById('score-' + activePlayer).textContent =
     scores[activePlayer];
     document.getElementById('current-' + activePlayer).textContent = '0';
-    document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-        document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
-    roundScore = 0;
-    
+    nextPlayer();
+    roundScore = 0;    
 });
+
+function nextPlayer() {
+    document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+    document.querySelector('.dice').style.display = 'none';
+}
