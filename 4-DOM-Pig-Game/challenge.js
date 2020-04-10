@@ -27,7 +27,15 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.getElementById('dice-1').src = 'dice-' + dice1 + '.png';
         document.getElementById('dice-2').src = 'dice-' + dice2 + '.png';
 
-        if (dice === 6 && lastDice === 6) {
+        if (dice1 !== 1 && dice2 !== 1) {
+            roundScore += dice1 + dice2;
+            document.getElementById('current-' + activePlayer).textContent = roundScore;
+        } else {
+            roundScore = 0;
+            document.getElementById('current-' + activePlayer).textContent = roundScore;
+            nextPlayer();
+        }
+        /*if (dice === 6 && lastDice === 6) {
             scores[activePlayer] = 0;
             document.getElementById('score-' + activePlayer).textContent =
         scores[activePlayer];
@@ -41,7 +49,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
             nextPlayer();
         }
         
-        lastDice = dice;
+        lastDice = dice;*/
     }
 });
 
