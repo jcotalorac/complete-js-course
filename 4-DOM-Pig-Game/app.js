@@ -9,22 +9,10 @@ GAME RULES:
 
 var scores, roundScore, activePlayer;
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
+init();
 
 //document.querySelector('#current-' + activePlayer).textContent = dice;
 //document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
-
-document.querySelector('.dice').style.display = 'none';
-
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
 
 function btn() {
     console.log('Callback with external function');
@@ -71,7 +59,18 @@ function nextPlayer() {
 }
 
 document.querySelector('.btn-new').addEventListener('click', function(){
-    scores = [0, 0];
-    activePlayer = 0;
-    roundScore = 0;
+    init();
 });
+
+function init() {
+    scores = [0, 0];
+    roundScore = 0;
+    activePlayer = 0;
+    
+    document.querySelector('.dice').style.display = 'none';
+
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+}
