@@ -69,3 +69,9 @@ function nextPlayer() {
     document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
     document.querySelector('.dice').style.display = 'none';
 }
+
+document.querySelector('.btn-new').addEventListener('click', function(){
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+});
