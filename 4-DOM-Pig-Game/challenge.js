@@ -26,6 +26,9 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         if (dice === 6 && lastDice === 6) {
             scores[activePlayer] = 0;
+            document.getElementById('score-' + activePlayer).textContent =
+        scores[activePlayer];
+            nextPlayer();
         } else if (dice !== 1) {
             roundScore += dice;
             document.getElementById('current-' + activePlayer).textContent = roundScore;
