@@ -69,6 +69,9 @@ function init() {
     
     document.querySelector('.player-0-panel').classList.add('active');
     document.querySelector('.player-1-panel').classList.remove('active');
+    
+    document.querySelector('#name-0').textContent = 'Player 1';
+    document.querySelector('#name-1').textContent = 'Player 2';
 
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
