@@ -110,7 +110,7 @@ console.log(ages, fullAges);
 
 ///////////////////////////
 // Functions that returns functions
-
+/*
 function interviewQuestion(job) {
     if(job === 'designer') {
         return function(name){
@@ -136,3 +136,13 @@ designerQuestion('Mark');
 designerQuestion('Mike');
 
 interviewQuestion('teacher')('Mike');
+*/
+
+//////////////////////////////////////7
+// Immediately Invoked Function Expressions
+
+function game() {
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+}
+game();
