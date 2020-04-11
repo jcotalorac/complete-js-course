@@ -65,3 +65,18 @@ var obj1 = {
 var obj2 = obj1;
 obj1.age = 30;
 console.log(obj1, obj2);
+
+var age = 27;
+var obj = {
+    name: 'Jonas',
+    city: 'Lisbon'
+};
+
+function change(a, b) {
+    a = 30;
+    b.city = 'San Francisco';
+}
+
+change(age, obj);
+
+console.log(age, obj.city);
