@@ -40,3 +40,6 @@ var personProto = {
 }
 
 var john = Object.create(personProto);
+john.name = 'John';
+john.yearOfBirth = 1990;
+john.job = 'teacher';
