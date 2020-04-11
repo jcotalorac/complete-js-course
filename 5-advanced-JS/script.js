@@ -128,3 +128,4 @@ function interviewQuestion(job) {
 }
 
 var teacherQuestion = interviewQuestion('teacher');
+teacherQuestion('John');
