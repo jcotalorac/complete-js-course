@@ -147,6 +147,6 @@ function game() {
 }
 game();
 
-function() {
+(function() {
     
-}
+})
