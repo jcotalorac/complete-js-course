@@ -134,3 +134,5 @@ designerQuestion('John');
 designerQuestion('Jane');
 designerQuestion('Mark');
 designerQuestion('Mike');
+
+interviewQuestion('teacher')('Mike');
