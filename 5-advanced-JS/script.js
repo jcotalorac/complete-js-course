@@ -146,3 +146,7 @@ function game() {
     console.log(score >= 5);
 }
 game();
+
+function() {
+    
+}
