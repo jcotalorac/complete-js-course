@@ -285,8 +285,8 @@ console.log(fullJapan);*/
     var questions = [question1, question2, question3];
 
     function score() {
+        var sc = 0;
         return function(isCorrect) {
-            var sc = 0;
             if(isCorrect) {
                 sc++;
             }
