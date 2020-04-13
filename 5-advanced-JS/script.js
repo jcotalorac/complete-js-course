@@ -280,6 +280,16 @@ console.log(fullJapan);*/
 
     var questions = [question1, question2, question3];
 
+    function score() {
+        return function(isCorrect) {
+            var sc = 0;
+            if(isCorrect) {
+                sc++;
+            }
+            return sc;
+        }
+    }
+    
     do{
         var selectedQuestion = Math.random() * questions.length;
         questions[Math.floor(selectedQuestion)].displayQuestion();
