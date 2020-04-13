@@ -159,7 +159,7 @@ game();
 */
 /////////////////////////
 // Closures
-
+/*
 function retirement(retirementAge) {
     var a = ' years left until retirement.';
     return function(yearOfBirth) {
@@ -176,4 +176,22 @@ retirementUS(1990);
 retirementGermany(1990);
 retirementIceland(1990);
 
-//retirement(66)(1990);
+//retirement(66)(1990);*/
+
+////////////////////////////////
+// BInd, call and apply methods of function objects
+
+var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay) {
+        if(style === 'formal') {
+            console.log('Good ' + timeOfDay + ', Ladies and gentlemen! I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old.');
+        } else if (style === 'friendly') {
+            console.log('Hey! What\'s up? I\'m ' + this.name + ', I\'m a ' + this.job + ' and I\'m ' + this.age + ' years old. Have a nice ' + timeOfDay + '.');
+        }
+    }
+};
+
+john.presentation('formal', 'morming');
