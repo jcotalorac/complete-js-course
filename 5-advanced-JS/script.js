@@ -242,11 +242,16 @@ console.log(fullJapan);*/
 /////////////////////////////////
 // Coding challenge 7
 
-var Question = function(question, answers, correctAnswer){
+/*var Question = function(question, answers, correctAnswer){
     this.question = question,
     this.answers = answers;
     this.correctAnswer = correctAnswer;
-};
+};*/
+function Question(question, answers, correctAnswer) {
+    this.question = question,
+    this.answers = answers;
+    this.correctAnswer = correctAnswer;
+}
 
 var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
 
