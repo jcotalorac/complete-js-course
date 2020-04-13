@@ -180,7 +180,7 @@ retirementIceland(1990);
 
 ////////////////////////////////
 // BInd, call and apply methods of function objects
-
+/*
 var john = {
     name: 'John',
     age: 26,
@@ -237,4 +237,34 @@ function isFullAge(limit, el) {
 var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
-console.log(fullJapan);
+console.log(fullJapan);*/
+
+/////////////////////////////////
+// Coding challenge 7
+
+var Question = function(question, answers, correctAnswer){
+    this.question = question,
+    this.answers = answers;
+    this.correctAnswer = correctAnswer;
+};
+
+var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
+
+var question2 = new Question('question2?', ['response4', 'response5', 'response6'], 2);
+
+var question3 = new Question('question3?', ['response7', 'response8', 'response9'], 0);
+
+var questions = [question1, question2, question3];
+
+var selectedQuestion = Math.random() * questions.length;
+console.log(questions[Math.floor(selectedQuestion)]);
+
+var answerInput = prompt('What is the correct answer of the question?');
+
+if(answerInput) {
+    if(answerInput === questions[Math.floor(selectedQuestion)].correctAnswer.toString()) {
+        console.log('You got it');
+    } else {
+        console.log('You\'re a loser');
+    }
+}
