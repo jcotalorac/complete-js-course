@@ -262,13 +262,17 @@ console.log(fullJapan);*/
         }
     }
 
-    Question.prototype.checkAnswer = function(answerInput) {
+    Question.prototype.checkAnswer = function(answerInput, callback) {
         if(answerInput) {
+            var sc;
             if(answerInput === this.correctAnswer.toString()) {
                 console.log('You got it');
+                sc = callback(true);
             } else {
                 console.log('You\'re a loser');
+                sc = callback(false);
             }
+            console.log('Score: ' + sc)
         }
     }
 
@@ -298,6 +302,6 @@ console.log(fullJapan);*/
 
         var answerInput = prompt('What is the correct answer of the question?');
 
-        questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
+        questions[Math.floor(selectedQuestion)].checkAnswer(answerInput, keepScore);
     } while (answerInput !== 'exit');
 })();
