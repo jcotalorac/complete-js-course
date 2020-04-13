@@ -290,6 +290,8 @@ console.log(fullJapan);*/
         }
     }
     
+    var keepScore = score();
+    
     do{
         var selectedQuestion = Math.random() * questions.length;
         questions[Math.floor(selectedQuestion)].displayQuestion();
