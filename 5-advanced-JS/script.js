@@ -242,46 +242,48 @@ console.log(fullJapan);*/
 /////////////////////////////////
 // Coding challenge 7
 
-/*var Question = function(question, answers, correctAnswer){
+(function(){
+    /*var Question = function(question, answers, correctAnswer){
     this.question = question,
     this.answers = answers;
     this.correctAnswer = correctAnswer;
-};*/
-function Question(question, answers, correctAnswer) {
-    this.question = question,
-    this.answers = answers;
-    this.correctAnswer = correctAnswer;
-}
-
-Question.prototype.displayQuestion = function() {
-    console.log(this.question);
-    
-    for(var i = 0; i < this.answers.length; i++) {
-        console.log(i + ': ' + this.answers[i]);
+    };*/
+    function Question(question, answers, correctAnswer) {
+        this.question = question,
+        this.answers = answers;
+        this.correctAnswer = correctAnswer;
     }
-}
 
-Question.prototype.checkAnswer = function(answerInput) {
-    if(answerInput) {
-        if(answerInput === this.correctAnswer.toString()) {
-            console.log('You got it');
-        } else {
-            console.log('You\'re a loser');
+    Question.prototype.displayQuestion = function() {
+        console.log(this.question);
+
+        for(var i = 0; i < this.answers.length; i++) {
+            console.log(i + ': ' + this.answers[i]);
         }
     }
-}
 
-var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
+    Question.prototype.checkAnswer = function(answerInput) {
+        if(answerInput) {
+            if(answerInput === this.correctAnswer.toString()) {
+                console.log('You got it');
+            } else {
+                console.log('You\'re a loser');
+            }
+        }
+    }
 
-var question2 = new Question('question2?', ['response4', 'response5', 'response6'], 2);
+    var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
 
-var question3 = new Question('question3?', ['response7', 'response8', 'response9'], 0);
+    var question2 = new Question('question2?', ['response4', 'response5', 'response6'], 2);
 
-var questions = [question1, question2, question3];
+    var question3 = new Question('question3?', ['response7', 'response8', 'response9'], 0);
 
-var selectedQuestion = Math.random() * questions.length;
-questions[Math.floor(selectedQuestion)].displayQuestion();
+    var questions = [question1, question2, question3];
 
-var answerInput = prompt('What is the correct answer of the question?');
+    var selectedQuestion = Math.random() * questions.length;
+    questions[Math.floor(selectedQuestion)].displayQuestion();
 
-questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
+    var answerInput = prompt('What is the correct answer of the question?');
+
+    questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
+})();
