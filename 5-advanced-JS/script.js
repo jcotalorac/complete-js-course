@@ -228,8 +228,8 @@ function calculateAge(el) {
     return 2016 - el;
 }
 
-function isFullAge(el) {
-    return el >= 18;
+function isFullAge(limit, el) {
+    return el >= limit;
 }
 
 var ages = arrayCalc(years, calculateAge);
