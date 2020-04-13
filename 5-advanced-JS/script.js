@@ -261,6 +261,16 @@ Question.prototype.displayQuestion = function() {
     }
 }
 
+Question.prototype.checkAnswer = function(answerInput) {
+    if(answerInput) {
+        if(answerInput === this.correctAnswer.toString()) {
+            console.log('You got it');
+        } else {
+            console.log('You\'re a loser');
+        }
+    }
+}
+
 var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
 
 var question2 = new Question('question2?', ['response4', 'response5', 'response6'], 2);
@@ -274,10 +284,4 @@ questions[Math.floor(selectedQuestion)].displayQuestion();
 
 var answerInput = prompt('What is the correct answer of the question?');
 
-if(answerInput) {
-    if(answerInput === questions[Math.floor(selectedQuestion)].correctAnswer.toString()) {
-        console.log('You got it');
-    } else {
-        console.log('You\'re a loser');
-    }
-}
+questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
