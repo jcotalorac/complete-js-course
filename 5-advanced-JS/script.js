@@ -253,6 +253,14 @@ function Question(question, answers, correctAnswer) {
     this.correctAnswer = correctAnswer;
 }
 
+Question.prototype.displayQuestion = function() {
+    console.log(this.question);
+    
+    for(var i = 0; i < this.answers.length; i++) {
+        console.log(i + ': ' + this.answers[i]);
+    }
+}
+
 var question1 = new Question('question1?', ['response1', 'response2', 'response3'], 1);
 
 var question2 = new Question('question2?', ['response4', 'response5', 'response6'], 2);
@@ -262,7 +270,7 @@ var question3 = new Question('question3?', ['response7', 'response8', 'response9
 var questions = [question1, question2, question3];
 
 var selectedQuestion = Math.random() * questions.length;
-console.log(questions[Math.floor(selectedQuestion)]);
+questions[Math.floor(selectedQuestion)].displayQuestion();
 
 var answerInput = prompt('What is the correct answer of the question?');
 
