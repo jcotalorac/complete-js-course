@@ -280,10 +280,12 @@ console.log(fullJapan);*/
 
     var questions = [question1, question2, question3];
 
-    var selectedQuestion = Math.random() * questions.length;
-    questions[Math.floor(selectedQuestion)].displayQuestion();
+    do{
+        var selectedQuestion = Math.random() * questions.length;
+        questions[Math.floor(selectedQuestion)].displayQuestion();
 
-    var answerInput = prompt('What is the correct answer of the question?');
+        var answerInput = prompt('What is the correct answer of the question?');
 
-    questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
+        questions[Math.floor(selectedQuestion)].checkAnswer(answerInput);
+    } while (answerInput !== 'exit');
 })();
