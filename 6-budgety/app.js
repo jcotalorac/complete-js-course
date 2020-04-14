@@ -14,13 +14,17 @@ var budgetController = (function(){
 //console.log(budgetController.publicTest(2));
 
 var UIController = (function(){
-    
+    return {
+        getInput: function() {
+            var type = document.querySelector('.add__type').value;
+        }
+    };
 })();
 
 var controller = (function(budgetCtrl, UICtrl){
     
     var ctrlAddItem = function() {
-        
+        console.log('Fine');
     };
     
     document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
