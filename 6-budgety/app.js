@@ -15,6 +15,11 @@ var budgetController = (function(){
     var allExpenses = [];
     var allIncomes = [];
     
+    var data = {
+        allExpenses: [],
+        allIncomes: []
+    };
+    
 })();
 
 var UIController = (function(){
