@@ -17,6 +17,8 @@ var UIController = (function(){
     return {
         getInput: function() {
             var type = document.querySelector('.add__type').value;
+            var type = document.querySelector('.add__description').value;
+            var value = document.querySelector('.add__value').value;
         }
     };
 })();
