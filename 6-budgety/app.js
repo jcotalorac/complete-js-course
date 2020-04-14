@@ -23,6 +23,22 @@ var budgetController = (function(){
         }
     };
     
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+            
+            ID = 0;
+            
+            if(type === 'inc') {
+                newItem = new Income(ID, des, val);
+                data.allItems.inc.push(newItem);
+            } else if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+                data.allItems.exp.push(newItem);
+            }
+        }
+    };
+    
 })();
 
 var UIController = (function(){
