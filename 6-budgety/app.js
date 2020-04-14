@@ -11,9 +11,11 @@ var budgetController = (function(){
         this.description = description;
         this.value = value;
     };
+    
+    var allExpenses = [];
+    var allIncomes = [];
+    
 })();
-
-//console.log(budgetController.publicTest(2));
 
 var UIController = (function(){
     
