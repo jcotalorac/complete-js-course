@@ -12,3 +12,7 @@ var budgetController = (function(){
 })();
 
 console.log(budgetController.publicTest(2));
+
+var UIController = (function(){
+    
+})();
