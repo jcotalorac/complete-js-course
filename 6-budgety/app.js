@@ -19,13 +19,8 @@ var UIController = (function(){
 
 var controller = (function(budgetCtrl, UICtrl){
     
-    var z = budgetCtrl.publicTest(2);
-    
-    return {
-        anotherPublic: function() {
-            return z;
-        }
-    }
+    document.querySelector('.add__btn').addEventListener('click', function(){
+        console.log('Pressing button');
+    })
+   
 })(budgetController, UIController);
-
-console.log(controller.anotherPublic());
