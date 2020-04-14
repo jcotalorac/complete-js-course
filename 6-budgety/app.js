@@ -23,7 +23,7 @@ var controller = (function(budgetCtrl, UICtrl){
     
     return {
         anotherPublic: function() {
-            console.log(z);
+            return z;
         }
     }
 })(budgetController, UIController);
