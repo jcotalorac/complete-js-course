@@ -16,3 +16,7 @@ console.log(budgetController.publicTest(2));
 var UIController = (function(){
     
 })();
+
+var controller = (function(budgetCtrl, UICtrl){
+    
+})(budgetController, UIController);
