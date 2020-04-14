@@ -21,6 +21,11 @@ var controller = (function(budgetCtrl, UICtrl){
     
     document.querySelector('.add__btn').addEventListener('click', function(){
         console.log('Pressing button');
-    })
+    });
+    
+    document.addEventListener('keypress', function(event) {
+        console.log('Document key pressed');
+        console.log(event);
+    });
    
 })(budgetController, UIController);
