@@ -16,9 +16,11 @@ var budgetController = (function(){
 var UIController = (function(){
     return {
         getInput: function() {
-            var type = document.querySelector('.add__type').value;
-            var type = document.querySelector('.add__description').value;
-            var value = document.querySelector('.add__value').value;
+            return {
+                type: document.querySelector('.add__type').value,
+                description: document.querySelector('.add__description').value,
+                value: document.querySelector('.add__value').value
+            };
         }
     };
 })();
