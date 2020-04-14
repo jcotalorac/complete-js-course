@@ -27,3 +27,5 @@ var controller = (function(budgetCtrl, UICtrl){
         }
     }
 })(budgetController, UIController);
+
+console.log(controller.anotherPublic());
