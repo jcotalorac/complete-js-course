@@ -28,7 +28,8 @@ var UIController = (function(){
 var controller = (function(budgetCtrl, UICtrl){
     
     var ctrlAddItem = function() {
-        console.log('Fine');
+        var input = UICtrl.getInput();
+        console.log(input);
     };
     
     document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
