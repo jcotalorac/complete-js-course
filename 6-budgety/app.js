@@ -37,6 +37,8 @@ var UIController = (function(){
 
 var controller = (function(budgetCtrl, UICtrl){
     
+    var DOM = UICtrl.getDOMstrings();
+    
     var ctrlAddItem = function() {
         var input = UICtrl.getInput();
         console.log(input);
