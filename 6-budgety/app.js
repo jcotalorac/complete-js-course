@@ -12,9 +12,6 @@ var budgetController = (function(){
         this.value = value;
     };
     
-    var allExpenses = [];
-    var allIncomes = [];
-    
     var data = {
         allExpenses: [],
         allIncomes: []
