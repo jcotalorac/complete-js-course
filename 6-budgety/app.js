@@ -58,6 +58,13 @@ var controller = (function(budgetCtrl, UICtrl){
         console.log(input);
     };
     
-    
+    return {
+        init: function() {
+            console.log('Initializing');
+            setupEventListeners();
+        }
+    }    
    
 })(budgetController, UIController);
+
+controller.init();
