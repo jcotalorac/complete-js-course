@@ -31,11 +31,10 @@ var budgetController = (function(){
             
             if(type === 'inc') {
                 newItem = new Income(ID, des, val);
-                data.allItems.inc.push(newItem);
             } else if (type === 'exp') {
                 newItem = new Expense(ID, des, val);
-                data.allItems.exp.push(newItem);
             }
+            data.allItems[type].push(newItem);
         }
     };
     
