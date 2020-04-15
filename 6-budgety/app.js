@@ -62,6 +62,14 @@ var budgetController = (function(){
             
             data.percentage = Math.round((data.totals.exp / data.totals.inc) + 100);
         },
+        getBudget: function() {
+            return {
+                budget: data.budget,
+                totalInc: data.allItems.inc,
+                totalExp : data.allItems.exp,
+                percentage: data.percentage
+            };
+        },
         testing: function() {
             console.log(data);
         }
