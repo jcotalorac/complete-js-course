@@ -50,11 +50,12 @@ var budgetController = (function(){
                 newItem = new Expense(ID, des, val);
             }
             data.allItems[type].push(newItem);
-            data.totals[type] += parseInt(newItem.value);
+            
             return newItem;
         },
         calculateBudget: function(){
-            
+            calculateTotal('inc');
+            calculateTotal('exp');
         },
         testing: function() {
             console.log(data);
