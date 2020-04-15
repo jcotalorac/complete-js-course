@@ -125,10 +125,12 @@ var controller = (function(budgetCtrl, UICtrl){
         
         input = UICtrl.getInput();
         
-        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
+        if(input.description !== "" && !isNaN(input.value) && input.value > 0) {
+            newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         
-        UICtrl.addListItem(newItem, input.type);
-        UICtrl.clearFields();
+            UICtrl.addListItem(newItem, input.type);
+            UICtrl.clearFields();
+        }
     };
     
     return {
