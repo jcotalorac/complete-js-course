@@ -27,7 +27,7 @@ var budgetController = (function(){
         addItem: function(type, des, val) {
             var newItem, ID;
             
-            ID = data.allItems[type][data.allItems[type] - 1].id + 1;
+            ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
             
             if(type === 'inc') {
                 newItem = new Income(ID, des, val);
@@ -37,6 +37,9 @@ var budgetController = (function(){
             data.allItems[type].push(newItem);
             data.totals[type] += newItem.value;
             return newItem;
+        },
+        testing: function() {
+            console.log(data);
         }
     };
     
