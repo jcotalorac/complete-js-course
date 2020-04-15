@@ -32,7 +32,7 @@ var budgetController = (function(){
             inc: 0
         },
         budget : 0,
-        percentage: 1
+        percentage: -1
     };
     
     return {
@@ -161,6 +161,8 @@ var controller = (function(budgetCtrl, UICtrl){
         
             UICtrl.addListItem(newItem, input.type);
             UICtrl.clearFields();
+            
+            updateBudget();
         }
     };
     
