@@ -84,7 +84,8 @@ var controller = (function(budgetCtrl, UICtrl){
     
     var ctrlAddItem = function() {
         var input = UICtrl.getInput();
-        console.log(input);
+        
+        budgetCtrl.addItem(input.type, input.description, input.value);
     };
     
     return {
