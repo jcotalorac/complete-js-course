@@ -42,6 +42,9 @@ var budgetController = (function(){
             data.totals[type] += parseInt(newItem.value);
             return newItem;
         },
+        calculateBudget: function(){
+            
+        },
         testing: function() {
             console.log(data);
         }
