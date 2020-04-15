@@ -57,6 +57,8 @@ var budgetController = (function(){
         calculateBudget: function(){
             calculateTotal('inc');
             calculateTotal('exp');
+            
+            data.budget = data.totals.inc - data.totals.exp;
         },
         testing: function() {
             console.log(data);
