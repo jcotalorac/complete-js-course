@@ -90,7 +90,7 @@ var UIController = (function(){
             fieldsArray = Array.prototype.slice.call(fields);
             
             fieldsArray.forEach(function(current, index, array){
-                
+                current.value = '';
             });
         },
         getDOMstrings: function() {
@@ -124,6 +124,7 @@ var controller = (function(budgetCtrl, UICtrl){
         newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         
         UICtrl.addListItem(newItem, input.type);
+        UICtrl.clearFields();
     };
     
     return {
