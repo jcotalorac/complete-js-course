@@ -66,6 +66,15 @@ var UIController = (function(){
                 value: document.querySelector(DOMstrings.inputValue).value
             };
         },
+        addListItem: function(item, type) {
+            var html;
+            
+            if(type === 'inc') {
+                html = '<div class="item clearfix" id="income-0"><div class="item__description">Salary</div><div class="right clearfix"><div class="item__value">+ 2,100.00</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+            } else if (type === 'exp') {
+                html = '<div class="item clearfix" id="expense-0"><div class="item__description">Apartment rent</div><div class="right clearfix"><div class="item__value">- 900.00</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+            }
+        },
         getDOMstrings: function() {
             return DOMstrings;
         }
