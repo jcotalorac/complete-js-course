@@ -88,6 +88,10 @@ var UIController = (function(){
             
             fields = document.querySelectorAll(DOMstrings.inputDescription + ', ' + DOMstrings.inputValue);
             fieldsArray = Array.prototype.slice.call(fields);
+            
+            fieldsArray.forEach(function(current, index, array){
+                
+            });
         },
         getDOMstrings: function() {
             return DOMstrings;
