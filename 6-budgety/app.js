@@ -55,7 +55,9 @@ var UIController = (function(){
         inputType: '.add__type',
         inputDescription: '.add__description',
         inputValue: '.add__value',
-        inputButton: '.add__btn'
+        inputButton: '.add__btn',
+        incomeContainer: 'income__list',
+        expenseContainer: 'expenses__list'
     };
     
     return {
