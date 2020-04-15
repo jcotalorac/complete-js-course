@@ -39,7 +39,7 @@ var budgetController = (function(){
                 newItem = new Expense(ID, des, val);
             }
             data.allItems[type].push(newItem);
-            data.totals[type] += newItem.value;
+            data.totals[type] += parseInt(newItem.value);
             return newItem;
         },
         testing: function() {
