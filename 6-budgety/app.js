@@ -201,6 +201,11 @@ var UIController = (function(){
             
             nodeListForEach(fields, function(current, index){
                 
+                if(percentages[index] > 0) {
+                    current.textContent = percentages[index] + '%';
+                } else {
+                    current.textContent = '---';
+                }
             });
         },
         getDOMstrings: function() {
