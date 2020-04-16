@@ -221,6 +221,8 @@ var controller = (function(budgetCtrl, UICtrl){
             budgetCtrl.deleteItem(type, ID);
             
             UICtrl.deleteListItem(itemID);
+            
+            updateBudget();
         }
     };
     
