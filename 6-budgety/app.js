@@ -193,6 +193,10 @@ var controller = (function(budgetCtrl, UICtrl){
         UICtrl.displayBudget(budget);
     }
     
+    var updatePertentages = function() {
+        
+    };
+    
     var ctrlAddItem = function() {
         var input, newItem;
         
