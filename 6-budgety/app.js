@@ -54,6 +54,9 @@ var budgetController = (function(){
             
             return newItem;
         },
+        deleteItem: function(type, id){
+            
+        },
         calculateBudget: function(){
             calculateTotal('inc');
             calculateTotal('exp');
