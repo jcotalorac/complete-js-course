@@ -79,6 +79,9 @@ var budgetController = (function(){
                 data.percentage = -1;
             }
         },
+        calculatePercentage: function() {
+            
+        },
         getBudget: function() {
             return {
                 budget: data.budget,
