@@ -97,6 +97,13 @@ var budgetController = (function(){
                 current.calcPercentage();
             });
         },
+        getPercentages: function() {
+            var allPercentages;
+            allPercentages = data.allItems.exp.map(function(current){
+                return current.getPercentage();
+            });
+            return allPercentages;
+        },
         getBudget: function() {
             return {
                 budget: data.budget,
