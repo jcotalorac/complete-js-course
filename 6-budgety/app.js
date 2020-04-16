@@ -209,6 +209,8 @@ var controller = (function(budgetCtrl, UICtrl){
             UICtrl.clearFields();
             
             updateBudget();
+            
+            updatePertentages();
         }
     };
     
@@ -227,6 +229,8 @@ var controller = (function(budgetCtrl, UICtrl){
             UICtrl.deleteListItem(itemID);
             
             updateBudget();
+            
+            updatePertentages();
         }
     };
     
