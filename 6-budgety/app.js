@@ -219,6 +219,8 @@ var controller = (function(budgetCtrl, UICtrl){
             ID = parseInt(splitID[1]);
             
             budgetCtrl.deleteItem(type, ID);
+            
+            UICtrl.deleteListItem(itemID);
         }
     };
     
