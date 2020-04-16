@@ -55,9 +55,13 @@ var budgetController = (function(){
             return newItem;
         },
         deleteItem: function(type, id){
-            var ids = data.allItems[type].map(function(current){
+            var ids, index;
+            
+            ids = data.allItems[type].map(function(current){
                 return current.id;
             });
+            
+            index = ids.indexOf(id);
         },
         calculateBudget: function(){
             calculateTotal('inc');
