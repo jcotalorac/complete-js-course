@@ -242,7 +242,8 @@ var controller = (function(budgetCtrl, UICtrl){
         budgetCtrl.calculatePercentages();
         
         var percentages = budgetCtrl.getPercentages();
-        console.log(percentages);
+        
+        UICtrl.displayPercentages(percentages);
     };
     
     var ctrlAddItem = function() {
