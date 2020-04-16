@@ -132,6 +132,7 @@ var UIController = (function(){
             fieldsArray[0].focus();
         },
         displayBudget: function(obj){
+            console.log(obj);
             
             document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
             document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
@@ -163,7 +164,7 @@ var controller = (function(budgetCtrl, UICtrl){
         budgetCtrl.calculateBudget();
         
         var budget = budgetCtrl.getBudget();
-        console.log(budget);
+        UICtrl.displayBudget(budget);
     }
     
     var ctrlAddItem = function() {
