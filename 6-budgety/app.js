@@ -133,8 +133,10 @@ var UIController = (function(){
             
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
-        deleteListItem: function() {
+        deleteListItem: function(selectorID) {
+            var elem = document.getElementById(selectorID);
             
+            elem.parentNode.removeChild(elem);
         },
         clearFields: function() {
             var fields, fieldsArray;
