@@ -69,8 +69,8 @@ var budgetController = (function(){
         getBudget: function() {
             return {
                 budget: data.budget,
-                totalInc: data.allItems.inc,
-                totalExp : data.allItems.exp,
+                totalInc: data.totals.inc,
+                totalExp : data.totals.exp,
                 percentage: data.percentage
             };
         },
@@ -132,7 +132,6 @@ var UIController = (function(){
             fieldsArray[0].focus();
         },
         displayBudget: function(obj){
-            console.log(obj);
             
             document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
             document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
