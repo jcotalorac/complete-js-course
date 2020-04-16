@@ -55,7 +55,9 @@ var budgetController = (function(){
             return newItem;
         },
         deleteItem: function(type, id){
-            
+            var ids = data.allItems[type].map(function(current){
+                return current.id;
+            });
         },
         calculateBudget: function(){
             calculateTotal('inc');
