@@ -160,8 +160,8 @@ var friends = ['Bob', 'Jane', 'Mark'];
 new Person('John').myFriends5(friends);
 
 Person.prototype.myFriends6 = function(friends){
-    var arr = friends.map(current => `${this.name} + ' is friends with ' + ${current}`);
+    var arr = friends.map(current => `${this.name} is friends with ${current}`);
     
     console.log(arr);
 }
-new Person('John').myFriends6(friends);
+new Person('Mike').myFriends6(friends);
