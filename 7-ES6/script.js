@@ -213,7 +213,8 @@ boxerArr6.forEach(current => current.style.backgroundColor = 'dodgerblue');
 for(var i = 0; i < boxesArr5.length; i++) {
     
     if(boxesArr5[i].className === 'box blue') {
-        continue;
+        //continue;
+        break;
     }
     
     boxesArr5[i].textContent = 'I changed to blue!';
