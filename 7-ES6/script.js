@@ -11,7 +11,7 @@ name6 = 'Jane Miller';
 console.log(name6);
 */
 
-function driverLicence(passedTest){
+/*function driverLicence(passedTest){
     
     if(passedTest) {
         console.log(firstName);
@@ -43,4 +43,14 @@ for(var i = 0; i < 5; i++) {
     console.log(i);
 }
 
-console.log(i);
+console.log(i);*/
+
+//////////////////////////
+// Blocks and IIFEs
+
+{
+    const a = 1;
+    let b = 2;
+}
+
+console.log(a + b);
