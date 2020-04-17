@@ -14,6 +14,7 @@ console.log(name6);
 function driverLicence(passedTest){
     
     if(passedTest) {
+        console.log(firstName);
         var firstName = 'John';
         var yearOfBirth = 1990;
     }
@@ -23,6 +24,7 @@ function driverLicence(passedTest){
 driverLicence(true);
 
 function driverLicence6(passedTest){
+    console.log(firstName);
     let firstName;
     const yearOfBirth = 1990;
     
