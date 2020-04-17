@@ -155,6 +155,12 @@ var UIController = (function(){
         return (type === 'exp' ?  '-' : '+') + int + '.' + dec;
     };
     
+    var nodeListForEach = function(list, callback){
+        for (var i = 0; i < list.length; i++) {
+            callback(list[i], i);
+        }
+    };
+    
     return {
         getInput: function() {
             return {
@@ -211,12 +217,6 @@ var UIController = (function(){
         displayPercentages: function(percentages){
             
             var fields = document.querySelectorAll(DOMstrings.expensesPercentageLabel);
-            
-            var nodeListForEach = function(list, callback){
-                for (var i = 0; i < list.length; i++) {
-                    callback(list[i], i);
-                }
-            };
             
             nodeListForEach(fields, function(current, index){
                 
