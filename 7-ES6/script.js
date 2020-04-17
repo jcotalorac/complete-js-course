@@ -48,7 +48,7 @@ console.log(i);*/
 //////////////////////////
 // Blocks and IIFEs
 
-{
+/*{
     const a = 1;
     let b = 2;
 }
@@ -59,4 +59,17 @@ console.log(i);*/
     var c = 3;
 })();
 
-console.log(c);
+console.log(c);*/
+
+//////////////////////////
+// Strings
+
+let firstName = 'John';
+let lastName = 'Smith';
+const yearOfBirth = 1990;
+
+function calcAge(year) {
+    return 2016 - year;
+}
+
+console.log('This is ' + firstName + ' ' + lastName + '. He was born in ' + yearOfBirth + '. Today, he is ' + calcAge(yearOfBirth) + ' years old.');
