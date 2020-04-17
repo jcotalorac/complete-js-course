@@ -24,11 +24,10 @@ driverLicence(true);
 
 function driverLicence6(passedTest){
     let firstName;
-    const yearOfBirth;
+    const yearOfBirth = 1990;
     
     if(passedTest) {
         firstName = 'John';
-        yearOfBirth = 1990;
     }
     console.log(firstName + ', born in ' + yearOfBirth + ' is now officially allowed to drive a car.');
 }
