@@ -170,7 +170,7 @@ new Person('Mike').myFriends6(friends);
 //////////////////////////////
 // Destructuring
 
-var john = ['John', 26];
+/*var john = ['John', 26];
 //var name = john[0];
 //var age = john[1];
 
@@ -195,4 +195,14 @@ function calcAgeRetirement(year) {
 }
 
 const [age6, retirement] = calcAgeRetirement(1990);
-console.log(age6, retirement);
+console.log(age6, retirement);*/
+
+////////////////////////////////
+// Arrays
+
+const boxes = document.querySelectorAll('.box');
+
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(current){
+    current.style.backgroundColor = 'dodgerblue';
+});
