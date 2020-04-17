@@ -236,3 +236,5 @@ var full = ages.map(function(current){
 console.log(full);
 console.log(full.indexOf(true));
 console.log(ages[full.indexOf(true)]);
+
+console.log(ages.findIndex(current => current >= 18));
