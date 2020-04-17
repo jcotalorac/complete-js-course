@@ -202,7 +202,10 @@ console.log(age6, retirement);*/
 
 const boxes = document.querySelectorAll('.box');
 
-var boxesArr5 = Array.prototype.slice.call(boxes);
+/*var boxesArr5 = Array.prototype.slice.call(boxes);
 boxesArr5.forEach(function(current){
     current.style.backgroundColor = 'dodgerblue';
-});
+});*/
+
+const boxerArr6 = Array.from(boxes);
+boxerArr6.forEach(current => current.style.backgroundColor = 'dodgerblue');
