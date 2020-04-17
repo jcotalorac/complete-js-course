@@ -231,7 +231,7 @@ var UIController = (function(){
             var now, year;
             
             now = new Date();
-            year = now.getFullYear;
+            year = now.getFullYear();
             
             document.querySelector(DOMstrings.dateLabel).textContent = year;
         },
@@ -313,6 +313,7 @@ var controller = (function(budgetCtrl, UICtrl){
     return {
         init: function() {
             console.log('Initializing');
+            UICtrl.displayMonth(),
             UICtrl.displayBudget({
                 budget: 0,
                 totalInc: 0,
