@@ -97,3 +97,10 @@ console.log(ages6);
 
 ages6 = years.map((current, index) => `Age element ${index + 1}: ${2016 - current}`);
 console.log(ages6);
+
+ages6 = years.map((current, index) => {
+    const now = new Date().getFullYear();
+    const age = now - current;
+    return `Age element ${index + 1}: ${age}`;
+});
+console.log(ages6);
