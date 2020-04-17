@@ -136,6 +136,24 @@ var UIController = (function(){
         expensesPercentageLabel: '.item__percentage'
     };
     
+    var formatNumber = function(number, type) {
+        var numSplit, int, dec;
+
+        number = Math.abs(number);
+        number = number.toFixed(2);
+
+        numSplit = number.split('.');
+
+        int = numSplit[0];
+        if(int.length > 3) {
+            int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, int.length);
+        }
+
+        dec = numSplit[1];
+
+        return (type === 'exp' ?  '-' : '+') + int + '.' + dec;
+    };
+    
     return {
         getInput: function() {
             return {
@@ -155,7 +173,7 @@ var UIController = (function(){
                 html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             }
             
-            newHtml = html.replace('%id%', item.id).replace('%description%', item.description).replace('%value%', this.formatNumber(item.value, type));
+            newHtml = html.replace('%id%', item.id).replace('%description%', item.description).replace('%value%', formatNumber(item.value, type));
             
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
         },
@@ -207,23 +225,6 @@ var UIController = (function(){
                     current.textContent = '---';
                 }
             });
-        },
-        formatNumber(number, type) {
-            var numSplit, int, dec;
-            
-            number = Math.abs(number);
-            number = number.toFixed(2);
-            
-            numSplit = number.split('.');
-            
-            int = numSplit[0];
-            if(int.length > 3) {
-                int = int.substr(0, int.length - 3) + ',' + int.substr(int.length - 3, int.length);
-            }
-            
-            dec = numSplit[1];
-            
-            return (type === 'exp' ?  '-' : '+') + int + '.' + dec;
         },
         getDOMstrings: function() {
             return DOMstrings;
