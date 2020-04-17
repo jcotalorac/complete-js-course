@@ -151,7 +151,7 @@ function Person(name) {
 Person.prototype.myFriends5 = function(friends){
     var arr = friends.map(function(current){
         return this.name + ' is friends with ' + current;
-    });
+    }.bind(this));
     
     console.log(arr);
 }
