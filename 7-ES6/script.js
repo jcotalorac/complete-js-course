@@ -16,9 +16,19 @@ function driverLicence(passedTest){
     if(passedTest) {
         var firstName = 'John';
         var yearOfBirth = 1990;
-        
-        console.log(firstName + ', born in ' + yearOfBirth + ' is now officially allowed to drive a car.');
     }
+    console.log(firstName + ', born in ' + yearOfBirth + ' is now officially allowed to drive a car.');
 }
 
 driverLicence(true);
+
+function driverLicence6(passedTest){
+    
+    if(passedTest) {
+        let firstName = 'John';
+        const yearOfBirth = 1990;
+    }
+    console.log(firstName + ', born in ' + yearOfBirth + ' is now officially allowed to drive a car.');
+}
+
+driverLicence6(true);
