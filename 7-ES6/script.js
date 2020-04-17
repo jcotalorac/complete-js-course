@@ -92,5 +92,8 @@ var ages5 = years.map(function(current){
 });
 console.log(ages5);
 
-const ages6 = years.map(current => 2016 - current);
+let ages6 = years.map(current => 2016 - current);
+console.log(ages6);
+
+ages6 = years.map((current, index) => `Age element ${index + 1}: ${2016 - current}`);
 console.log(ages6);
