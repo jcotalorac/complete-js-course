@@ -85,7 +85,7 @@ console.log(n.repeat(3));*/
 ///////////////////////////////
 // Arrow functions
 
-const years = [1990, 1965, 1982, 1937];
+/*const years = [1990, 1965, 1982, 1937];
 
 var ages5 = years.map(function(current){
     return 2016 - current;
@@ -105,7 +105,7 @@ ages6 = years.map((current, index) => {
 });
 console.log(ages6);
 
-/*var box5 = {
+var box5 = {
     color: 'green',
     position: 1,
     clickMe: function() {
@@ -117,7 +117,7 @@ console.log(ages6);
     }
 };
 
-box5.clickMe();*/
+box5.clickMe();
 
 var box6 = {
     color: 'green',
@@ -131,7 +131,7 @@ var box6 = {
 };
 box6.clickMe();
 
-/*var box66 = {
+var box66 = {
     color: 'green',
     position: 1,
     clickMe: () => {
@@ -141,7 +141,7 @@ box6.clickMe();
         });
     }
 };
-box66.clickMe();*/
+box66.clickMe();
 
 
 function Person(name) {
@@ -165,3 +165,11 @@ Person.prototype.myFriends6 = function(friends){
     console.log(arr);
 }
 new Person('Mike').myFriends6(friends);
+*/
+
+//////////////////////////////
+// Destructuring
+
+var john = ['John', 26];
+var name = john[0];
+var age = john[1];
