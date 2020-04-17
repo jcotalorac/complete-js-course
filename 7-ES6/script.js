@@ -238,3 +238,4 @@ console.log(full.indexOf(true));
 console.log(ages[full.indexOf(true)]);
 
 console.log(ages.findIndex(current => current >= 18));
+console.log(ages.find(current => current >= 18));
