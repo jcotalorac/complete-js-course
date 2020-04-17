@@ -129,9 +129,9 @@ var box6 = {
         });
     }
 };
-//box6.clickMe();
+box6.clickMe();
 
-var box66 = {
+/*var box66 = {
     color: 'green',
     position: 1,
     clickMe: () => {
@@ -141,4 +141,20 @@ var box66 = {
         });
     }
 };
-box66.clickMe();
+box66.clickMe();*/
+
+
+function Person(name) {
+    this.name = name;
+};
+
+Person.prototype.myFriends5 = function(friends){
+    var arr = friends.map(function(current){
+        return this.name + ' is friends with ' + current;
+    });
+    
+    console.log(arr);
+}
+
+var friends = ['Bob', 'Jane', 'Mark'];
+new Person('John').myFriends5(friends);
