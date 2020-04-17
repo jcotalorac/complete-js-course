@@ -226,3 +226,13 @@ for(const current of boxesArr6) {
     }
     current.textContent = 'I changed to blue';
 }
+
+
+var ages = [12, 17, 8, 21, 14, 11];
+
+var full = ages.map(function(current){
+    return current >= 18;
+});
+console.log(full);
+console.log(full.indexOf(true));
+console.log(ages[full.indexOf(true)]);
