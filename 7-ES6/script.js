@@ -24,7 +24,7 @@ function driverLicence(passedTest){
 driverLicence(true);
 
 function driverLicence6(passedTest){
-    console.log(firstName);
+    //console.log(firstName);
     let firstName;
     const yearOfBirth = 1990;
     
@@ -35,3 +35,12 @@ function driverLicence6(passedTest){
 }
 
 driverLicence6(true);
+
+
+let i = 23;
+
+for(let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+console.log(i);
