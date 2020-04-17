@@ -53,4 +53,10 @@ console.log(i);*/
     let b = 2;
 }
 
-console.log(a + b);
+//console.log(a + b);
+
+(function(){
+    var c = 3;
+})();
+
+console.log(c);
