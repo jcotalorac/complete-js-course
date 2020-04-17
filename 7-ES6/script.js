@@ -171,5 +171,8 @@ new Person('Mike').myFriends6(friends);
 // Destructuring
 
 var john = ['John', 26];
-var name = john[0];
-var age = john[1];
+//var name = john[0];
+//var age = john[1];
+
+const [name, age] = ['John', 26];
+console.log(name, age);
