@@ -237,6 +237,9 @@ var UIController = (function(){
             
             document.querySelector(DOMstrings.dateLabel).textContent = months[month] + ' ' + year;
         },
+        changedType: function() {
+            
+        },
         getDOMstrings: function() {
             return DOMstrings;
         }
