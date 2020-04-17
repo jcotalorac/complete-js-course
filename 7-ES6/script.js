@@ -207,8 +207,8 @@ boxesArr5.forEach(function(current){
     current.style.backgroundColor = 'dodgerblue';
 });
 
-const boxerArr6 = Array.from(boxes);
-boxerArr6.forEach(current => current.style.backgroundColor = 'dodgerblue');
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(current => current.style.backgroundColor = 'dodgerblue');
 
 for(var i = 0; i < boxesArr5.length; i++) {
     
@@ -218,4 +218,11 @@ for(var i = 0; i < boxesArr5.length; i++) {
     }
     
     boxesArr5[i].textContent = 'I changed to blue!';
+}
+
+for(const current of boxesArr6) {
+    if(current.className === 'box blue') {
+        continue;
+    }
+    current.textContent = 'I changed to blue';
 }
