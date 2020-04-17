@@ -221,7 +221,7 @@ for(var i = 0; i < boxesArr5.length; i++) {
 }
 
 for(const current of boxesArr6) {
-    if(current.className === 'box blue') {
+    if(current.className.includes('blue')) {
         continue;
     }
     current.textContent = 'I changed to blue';
