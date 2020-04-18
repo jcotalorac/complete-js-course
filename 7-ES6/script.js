@@ -471,10 +471,10 @@ class Build {
 }
 
 class Park extends Build{
-    constructor(name, buildYear, trees, area){
+    constructor(name, buildYear, area, trees){
         super(name, buildYear);
-        this.trees = trees;
         this.area = area;
+        this.trees = trees;
     }
     treeDensity(){
         return this.trees / this.area;
