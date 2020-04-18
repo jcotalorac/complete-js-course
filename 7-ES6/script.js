@@ -351,4 +351,6 @@ console.log(question.has(4));
 question.delete(4);
 console.log(question.has(4));
 
-question.clear();
+//question.clear();
+
+question.forEach((value, key) => console.log(`This is ${key}, and it's set to ${value}`));
