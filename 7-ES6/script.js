@@ -398,7 +398,7 @@ class Person6 {
 const john6 = new Person6('John', 1990, 'teacher');
 john6.calculateAge();
 Person6.greeting();*/
-
+/*
 var Person5 = function(name, yearOfBirth, job){
     this.name = name;
     this.yearOfBirth = yearOfBirth;
@@ -458,3 +458,51 @@ class Athlete6 extends Person6 {
 const johnAthlete6 = new Athlete6('John', 1990, 'swimmer', 3, 10);
 johnAthlete6.calculateAge();
 johnAthlete6.wonMedal();
+*/
+
+////////////////////////////////
+// Coding challenge 8
+
+class Build {
+    constructor(name, buildYear){
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
+
+class Park extends Build{
+    constructor(name, buildYear, trees, area){
+        super(name, buildYear);
+        this.trees = trees;
+        this.area = area;
+    }
+    treeDensity(){
+        return this.trees / this.area;
+    }
+}
+
+class Street extends Build{
+    constructor(name, buildYear, length){
+        super(name, buildYear);
+        this.length = length;
+    }
+    sizeType(){
+        return 'huge';
+    }
+}
+
+let parks = [new Park('Green Park')];
+let streets = [new Street('Ocean Avenue', 1999), new Street('Evergreen Street', 2008), new Street('4th Street', 2015), new Street('Sunset Boulevard', 1982)];
+let parksAverageAge = 3;
+
+console.log('----PARKS REPORT-----');
+console.log(`Our ${parks.length} parks have an average of n years`);
+parks.forEach(park => console.log(`${park.name} has a tree density of ${park.treeDensity()} trees per square km`));
+parks.forEach(park => {
+    if(park.trees > 1000){
+        console.log(`${park.name} has more than 1000 trees.`);
+    }
+});
+console.log('----STREETS REPORT-----');
+console.log(`Our ${streets.length} streets have a total lenght of n km, with an average of km.`);
+streets.forEach(street => console.log(`${street.name}, built in ${street.buildYear} is a ${street.sizeType()} street.`));
