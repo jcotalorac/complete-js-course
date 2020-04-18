@@ -284,3 +284,4 @@ function isFullAge5() {
     });
 }
 isFullAge5(1990, 1999, 1965);
+isFullAge5(1990, 1999, 1965, 2016, 1987);
