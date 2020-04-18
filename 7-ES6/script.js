@@ -320,7 +320,7 @@ isFullAge6(21, 1990, 1999, 1965);*/
     this.nationatity = nationality;
 }*/
 
-function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
+/*function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
     this.firstName = firstName;
     this.lastName = lastName;
     this.yearOfBirth = yearOfBirth;
@@ -329,4 +329,17 @@ function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = '
 
 var john = new SmithPerson('John', 1990);
 var emily = new SmithPerson('Emily', 1983, 'Diaz', 'spanish');
-console.log(john, emily);
+console.log(john, emily);*/
+
+////////////////////////////////
+// Maps
+
+const question = new Map();
+question.set('question', 'What is the official name of the latest major JavaScript version?');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
+question.set(4, 'ES7');
+question.set('correct', 3);
+question.set(true, 'Correct answer');
+question.set(false, 'Wrong, please try again');
