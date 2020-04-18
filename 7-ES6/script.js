@@ -429,3 +429,20 @@ Athlete5.prototype.wonMedal = function(){
 var johnAthlete5 = new Athlete5('John', 1990, 'swimmer', 3, 10);
 johnAthlete5.calculateAge();
 johnAthlete5.wonMedal();
+
+class Person6 {
+    constructor(name, yearOfBirth, job){
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+    
+    calculateAge() {
+        var age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+}
+
+class Athlete6 extends Person6 {
+    
+}
