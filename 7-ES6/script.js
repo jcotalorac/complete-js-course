@@ -244,6 +244,7 @@ console.log(ages.find(current => current >= 18));
 ////////////////////////////////////
 // Spread operator
 
+/*
 function addFourAges(a, b, c, d) {
     return a + b + c + d;
 }
@@ -269,3 +270,12 @@ const boxes = document.querySelectorAll('.box');
 const all = [h, ...boxes];
 
 Array.from(all).forEach(current => current.style.color = 'purple');
+*/
+
+////////////////////////////////////////
+// Rest parameters
+
+function isFullAge5() {
+    console.log(arguments);
+}
+isFullAge5(1990, 1999, 1965);
