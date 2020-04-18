@@ -200,7 +200,7 @@ console.log(age6, retirement);*/
 ////////////////////////////////
 // Arrays
 
-const boxes = document.querySelectorAll('.box');
+/*const boxes = document.querySelectorAll('.box');
 
 var boxesArr5 = Array.prototype.slice.call(boxes);
 boxesArr5.forEach(function(current){
@@ -239,3 +239,14 @@ console.log(ages[full.indexOf(true)]);
 
 console.log(ages.findIndex(current => current >= 18));
 console.log(ages.find(current => current >= 18));
+*/
+
+////////////////////////////////////
+// Spread operator
+
+function addFourAges(a, b, c, d) {
+    return a + b + c + d;
+}
+
+var sum1 = addFourAges(18, 30, 12, 21);
+console.log(sum1);
