@@ -449,4 +449,12 @@ class Athlete6 extends Person6 {
         this.olympicGames = olympicGames;
         this.medals = medals;
     }
+    wonMedal() {
+        this.medals++;
+        console.log(this.medals);
+    }
 }
+
+const johnAthlete6 = new Athlete6('John', 1990, 'swimmer', 3, 10);
+johnAthlete6.calculateAge();
+johnAthlete6.wonMedal();
