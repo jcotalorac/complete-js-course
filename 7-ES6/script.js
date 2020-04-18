@@ -482,10 +482,20 @@ class Park extends Build{
 }
 
 class Street extends Build{
-    constructor(name, buildYear, length, size = 'normal'){
+    constructor(name, buildYear, length, size = 3){
         super(name, buildYear);
         this.length = length;
         this.size = size;
+    }
+    classifySize(){
+        const mapSize = new Map();
+        mapSize.set(1, 'tiny');
+        mapSize.set(2, 'small');
+        mapSize.set(3, 'normal');
+        mapSize.set(4, 'big');
+        mapSize.set(5, 'huge');
+        
+        return mapSize;
     }
 }
 
@@ -503,4 +513,4 @@ parks.forEach(park => {
 });
 console.log('----STREETS REPORT-----');
 console.log(`Our ${streets.length} streets have a total lenght of n km, with an average of km.`);
-streets.forEach(street => console.log(`${street.name}, built in ${street.buildYear} is a ${street.size} street.`));
+streets.forEach(street => console.log(`${street.name}, built in ${street.buildYear} is a ${street.classifySize().get(street.size)} street.`));
