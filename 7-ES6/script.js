@@ -420,3 +420,6 @@ var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals){
 };
 
 Athlete5.prototype = Object.create(Person5.prototype);
+
+var johnAthlete5 = new Athlete5('John', 1990, 'swimmer', 3, 10);
+johnAthlete5.calculateAge();
