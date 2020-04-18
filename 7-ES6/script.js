@@ -300,3 +300,8 @@ function isFullAge5(limit) {
     });
 }
 isFullAge5(18, 1990, 1999, 1965);
+
+function isFullAge6(limit, ...years){
+    years.forEach(current => console.log((2016 - current) >= limit));
+}
+isFullAge6(21, 1990, 1999, 1965);
