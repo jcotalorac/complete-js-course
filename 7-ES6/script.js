@@ -502,7 +502,7 @@ class Street extends Build{
 const parks = [new Park('Green Park', 1987, 0.2, 215), new Park('National Park', 1894, 2.9, 3541), new Park('Oak Park', 1953, 0.4, 949)];
 const streets = [new Street('Ocean Avenue', 1999, 1.1, 4), new Street('Evergreen Street', 2008, 2.7, 2), new Street('4th Street', 2015, 0.8), new Street('Sunset Boulevard', 1982, 2.5, 5)];
 
-function average(values){
+function calculus(values){
     const sum = values.reduce((previousCalculatedValue, value, index) => previousCalculatedValue + value, 0);
     
     return [sum, sum / values.length];
@@ -510,7 +510,7 @@ function average(values){
 
 console.log('----PARKS REPORT-----');
 var parkAges = parks.map(park => new Date().getFullYear() - park.buildYear);
-console.log(`Our ${parks.length} parks have an average of ${average(parkAges)[1]} years`);
+console.log(`Our ${parks.length} parks have an average of ${calculus(parkAges)[1]} years`);
 parks.forEach(park => console.log(`${park.name} has a tree density of ${park.treeDensity()} trees per square km`));
 parks.forEach(park => {
     if(park.trees > 1000){
