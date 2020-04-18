@@ -310,6 +310,9 @@ isFullAge6(21, 1990, 1999, 1965);*/
 // Default parameters
 
 function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+    
+    lastName === undefined ? lastName = 'Smith' : lastName;
+    
     this.firstName = firstName;
     this.lastName = lastName;
     this.yearOfBirth = yearOfBirth;
