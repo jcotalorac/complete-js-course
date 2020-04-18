@@ -414,5 +414,5 @@ var john5 = new Person5('John', 1990, 'teacher');
 john5.calculateAge();
 
 var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals){
-    
+    Person5.call(this, name, yearOfBirth, job);
 };
