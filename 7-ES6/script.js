@@ -285,3 +285,8 @@ function isFullAge5() {
 }
 isFullAge5(1990, 1999, 1965);
 isFullAge5(1990, 1999, 1965, 2016, 1987);
+
+function isFullAge6(...years){
+    console.log(years);
+}
+isFullAge6(1990, 1999, 1965);
