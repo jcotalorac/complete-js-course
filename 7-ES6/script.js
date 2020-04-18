@@ -276,6 +276,11 @@ Array.from(all).forEach(current => current.style.color = 'purple');
 // Rest parameters
 
 function isFullAge5() {
-    console.log(arguments);
+    //console.log(arguments);
+    var argsArr = Array.prototype.slice.call(arguments);
+    
+    argsArr.forEach(function(current){
+        console.log((2016 - current) >= 18);
+    });
 }
 isFullAge5(1990, 1999, 1965);
