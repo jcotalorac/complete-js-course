@@ -364,7 +364,7 @@ for(let [key, value] of question.entries()) {
 ///////////////////////////////////
 // Classes
 
-var Person5 = function(name, yearOfBirth, job){
+/*var Person5 = function(name, yearOfBirth, job){
     this.name = name;
     this.yearOfBirth = yearOfBirth;
     this.job = job;
@@ -397,4 +397,18 @@ class Person6 {
 
 const john6 = new Person6('John', 1990, 'teacher');
 john6.calculateAge();
-Person6.greeting();
+Person6.greeting();*/
+
+var Person5 = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+};
+
+Person5.prototype.calculateAge = function() {
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+}
+
+var john5 = new Person5('John', 1990, 'teacher');
+john5.calculateAge();
