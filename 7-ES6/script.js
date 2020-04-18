@@ -334,6 +334,7 @@ console.log(john, emily);*/
 ////////////////////////////////
 // Maps
 
+/*
 const question = new Map();
 question.set('question', 'What is the official name of the latest major JavaScript version?');
 question.set(1, 'ES5');
@@ -358,3 +359,21 @@ console.log(question.has(4));
 for(let [key, value] of question.entries()) {
     console.log(`This is ${key}, and it's set to ${value}`);
 }
+*/
+
+///////////////////////////////////
+// Classes
+
+var Person5 = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+};
+
+Person5.prototype.calculateAge = function() {
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+}
+
+var john5 = new Person5('John', 1990, 'teacher');
+john5.calculateAge();
