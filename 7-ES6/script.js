@@ -346,3 +346,9 @@ question.set(false, 'Wrong, please try again');
 
 console.log(question.get('question'));
 console.log(question.size);
+
+console.log(question.has(4));
+question.delete(4);
+console.log(question.has(4));
+
+question.clear();
