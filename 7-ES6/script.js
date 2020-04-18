@@ -309,11 +309,18 @@ isFullAge6(21, 1990, 1999, 1965);*/
 //////////////////////////////////////77
 // Default parameters
 
-function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
+/*function SmithPerson(firstName, yearOfBirth, lastName, nationality) {
     
     lastName === undefined ? lastName = 'Smith' : lastName;
     nationality === undefined ? nationality = 'american' : nationality;
     
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.yearOfBirth = yearOfBirth;
+    this.nationatity = nationality;
+}*/
+
+function SmithPerson(firstName, yearOfBirth, lastName = 'Smith', nationality = 'american') {
     this.firstName = firstName;
     this.lastName = lastName;
     this.yearOfBirth = yearOfBirth;
