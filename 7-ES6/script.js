@@ -296,7 +296,7 @@ function isFullAge5(limit) {
     var argsArr = Array.prototype.slice.call(arguments, 1);
     console.log(argsArr);
     argsArr.forEach(function(current){
-        console.log((2016 - current) >= 18);
+        console.log((2016 - current) >= limit);
     });
 }
 isFullAge5(18, 1990, 1999, 1965);
