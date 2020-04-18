@@ -418,3 +418,5 @@ var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals){
     this.olympicGames = olympicGames;
     this.medals = medals;
 };
+
+Athlete5.prototype = Object.create(Person5.prototype);
