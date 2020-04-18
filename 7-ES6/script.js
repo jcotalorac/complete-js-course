@@ -287,6 +287,6 @@ isFullAge5(1990, 1999, 1965);
 isFullAge5(1990, 1999, 1965, 2016, 1987);
 
 function isFullAge6(...years){
-    console.log(years);
+    years.forEach(current => console.log((2016 - current) >= 18));
 }
 isFullAge6(1990, 1999, 1965);
