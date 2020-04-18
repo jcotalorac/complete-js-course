@@ -444,5 +444,9 @@ class Person6 {
 }
 
 class Athlete6 extends Person6 {
-    
+    constructor(name, yearOfBirth, job, olympicGames, medals){
+        super(name, yearOfBirth, job);
+        this.olympicGames = olympicGames;
+        this.medals = medals;
+    }
 }
