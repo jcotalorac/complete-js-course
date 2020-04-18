@@ -518,5 +518,5 @@ parks.forEach(park => {
     }
 });
 console.log('----STREETS REPORT-----');
-console.log(`Our ${streets.length} streets have a total lenght of n km, with an average of km.`);
+console.log(`Our ${streets.length} streets have a total lenght of ${calculus(streets.map(street => street.length))[0]} km, with an average of ${calculus(streets.map(street => street.length))[1]} km.`);
 streets.forEach(street => console.log(`${street.name}, built in ${street.buildYear} is a ${street.classifySize().get(street.size)} street.`));
