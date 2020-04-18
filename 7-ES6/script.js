@@ -499,8 +499,8 @@ class Street extends Build{
     }
 }
 
-let parks = [new Park('Green Park')];
-let streets = [new Street('Ocean Avenue', 1999), new Street('Evergreen Street', 2008), new Street('4th Street', 2015), new Street('Sunset Boulevard', 1982)];
+const parks = [new Park('Green Park', 1987, 0.2, 215), new Park('National Park', 1894, 2.9, 3541), new Park('Oak Park', 1953, 0.4, 949)];
+const streets = [new Street('Ocean Avenue', 1999, 1.1, 4), new Street('Evergreen Street', 2008, 2.7, 2), new Street('4th Street', 2015, 0.8), new Street('Sunset Boulevard', 1982, 2.5, 5)];
 let parksAverageAge = 3;
 
 console.log('----PARKS REPORT-----');
