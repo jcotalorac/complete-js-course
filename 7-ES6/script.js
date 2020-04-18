@@ -415,4 +415,6 @@ john5.calculateAge();
 
 var Athlete5 = function(name, yearOfBirth, job, olympicGames, medals){
     Person5.call(this, name, yearOfBirth, job);
+    this.olympicGames = olympicGames;
+    this.medals = medals;
 };
