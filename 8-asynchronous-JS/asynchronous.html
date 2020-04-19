@@ -9,8 +9,13 @@
 <body>
     <h1>Asynchronous JavaScript</h1>
     <script>
+        const second = () => {
+            console.log('Second');
+        }
         const first = () => {
             console.log('Hey there');
+            second();
+            console.log('The end');
         }
         
         first();
