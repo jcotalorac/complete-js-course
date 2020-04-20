@@ -86,13 +86,13 @@
         })
         .then(recipeResolvedResult => {
             console.log(recipeResolvedResult);
-            return getRelated('recipeResolvedResult.publisher');
+            return getRelated('Jonas');
         })
         .then(relatedResolved => {
-            console.log(relatedResolved);
+            console.log(`resolved ${relatedResolved.title}`);
         })
         .catch(error => {
-            console.log(error);
+            console.log(`error ${error}`);
         });
     </script>
 </body>
