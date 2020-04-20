@@ -86,6 +86,10 @@
         })
         .then(recipeResolvedResult => {
             console.log(recipeResolvedResult);
+            return getRelated('recipeResolvedResult.publisher');
+        })
+        .then(relatedResolved => {
+            console.log(relatedResolved);
         })
         .catch(error => {
             console.log(error);
