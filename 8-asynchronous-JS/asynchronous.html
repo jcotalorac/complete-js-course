@@ -48,7 +48,7 @@
         }
         getRecipe();*/
         
-        const getIDs = new Promise((resolve, reject) => {
+        /*const getIDs = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve([523, 883, 432, 974]);
                 //reject('Failure');
@@ -77,7 +77,7 @@
                     resolve(recipe2);
                 }, 1500, publisher);
             });
-        };
+        };*/
         
         /*getIDs
         .then(IDs => {
@@ -95,7 +95,7 @@
             console.log(`error ${error}`);
         });*/
         
-        async function getRecipesAW() {
+        /*async function getRecipesAW() {
             const IDs = await getIDs;
             console.log(IDs);
             const recipe = await getRecipe(IDs[2]);
@@ -110,7 +110,9 @@
         rec
         .then(result => {
             console.log(`Success result: ${result}`);
-        });
+        });*/
+        
+        fetch('https://www.metaweather.com/api/location/2487956');
     </script>
 </body>
 </html>
