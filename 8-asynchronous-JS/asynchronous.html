@@ -102,8 +102,11 @@
             console.log(recipe);
             const related = await getRelated('Jonas');
             console.log(related);
+            
+            return recipe;
         }
-        getRecipesAW();
+        const rec = getRecipesAW();
+        console.log(rec);
     </script>
 </body>
 </html>
