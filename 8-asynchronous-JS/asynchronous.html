@@ -106,7 +106,11 @@
             return recipe;
         }
         const rec = getRecipesAW();
-        console.log(rec);
+        
+        rec
+        .then(result => {
+            console.log(`Success result: ${result}`);
+        });
     </script>
 </body>
 </html>
