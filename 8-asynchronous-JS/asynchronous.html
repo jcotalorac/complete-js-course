@@ -117,7 +117,9 @@
             console.log(result);
             return result.json();
         })
-        .then()
+        .then(data => {
+            console.log(data);
+        })
         .catch(error => console.log(error)
         );
     </script>
