@@ -70,10 +70,10 @@
         getIDs
         .then(IDs => {
             console.log(IDs);
-            getRecipe(IDs[2])
-            .then(recipeResolvedResult => {
-                console.log(recipeResolvedResult);
-            });
+            return getRecipe(IDs[2])
+        })
+        .then(recipeResolvedResult => {
+            console.log(recipeResolvedResult);
         })
         .catch(error => {
             console.log(error);
