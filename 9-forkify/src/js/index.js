@@ -2,13 +2,13 @@ import Search from './models/Search';
 
 const state = {};
 
-const controlSearch = () => {
+const controlSearch = async () => {
     const query = 'pizza';
 
     if (query) {
         state.search = new Search(query);
 
-        state.search.getResults();
+        await state.search.getResults();
     }
 }
 
