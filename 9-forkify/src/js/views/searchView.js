@@ -8,16 +8,16 @@ const renderRecipe = recipe => {
             <li>
             <a class="results__link results__link--active" href="#${recipe.recipe_id}">
                 <figure class="results__fig">
-                    <img src="img/test-1.jpg" alt="Test">
+                    <img src="${recipe.image_url}" alt="${recipe.title}">
                 </figure>
                 <div class="results__data">
-                    <h4 class="results__name">Pasta with Tomato ...</h4>
-                    <p class="results__author">The Pioneer Woman</p>
+                    <h4 class="results__name">${recipe.title}</h4>
+                    <p class="results__author">${recipe.publisher}</p>
                 </div>
             </a>
         </li>
     `;
-    elements.resultsOutput.insertAdjacentHTML('afterbegin', markup)
+    elements.searchResList.insertAdjacentHTML('beforeend', markup);
 }
 
 export const renderResults = recipes => {
