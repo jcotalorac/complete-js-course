@@ -1,1 +1,1 @@
-import string from './models/Search'
+import str from './models/Search';
