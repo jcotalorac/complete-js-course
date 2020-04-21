@@ -7,6 +7,8 @@ const controlSearch = () => {
 
     if (query) {
         state.search = new Search(query);
+
+        state.search.getResults();
     }
 }
 
@@ -14,7 +16,3 @@ document.querySelector('.search').addEventListener('submit', event => {
     event.preventDefault();
     controlSearch();
 });
-
-const search = new Search('pasta');
-console.log(search);
-search.getResults();
