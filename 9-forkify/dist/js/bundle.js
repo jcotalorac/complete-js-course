@@ -3843,9 +3843,22 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
   !*** ./src/js/index.js ***!
   \*************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nReferenceError: [BABEL] /home/juan.otalora/learn/complete-js-course/9-forkify/src/js/index.js: Unknown option: /home/juan.otalora/learn/complete-js-course/9-forkify/.babelrc.preset. Check out http://babeljs.io/docs/usage/options/ for more information about options.\\n\\nA common cause of this error is the presence of a configuration options object without the corresponding preset name. Example:\\n\\nInvalid:\\n  `{ presets: [{option: value}] }`\\nValid:\\n  `{ presets: [['presetName', {option: value}]] }`\\n\\nFor more detailed information on preset configuration, please see https://babeljs.io/docs/en/plugins#pluginpresets-options.\\n    at Logger.error (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/file/logger.js:41:11)\\n    at OptionManager.mergeOptions (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/file/options/option-manager.js:226:20)\\n    at OptionManager.init (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)\\n    at File.initOptions (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/file/index.js:212:65)\\n    at new File (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/file/index.js:135:24)\\n    at Pipeline.transform (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-core/lib/transformation/pipeline.js:46:16)\\n    at transpile (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-loader/lib/index.js:50:20)\\n    at Object.module.exports (/home/juan.otalora/learn/complete-js-course/9-forkify/node_modules/babel-loader/lib/index.js:173:20)\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
+"use strict";
+eval("\n\nvar _test = __webpack_require__(/*! ./test */ \"./src/js/test.js\");\n\nvar _test2 = _interopRequireDefault(_test);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar x = 23; // Global app controller\n\nconsole.log(_test2.default + ' from another module called test.js! Variable x is ' + x);\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/test.js":
+/*!************************!*\
+  !*** ./src/js/test.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nconsole.log('Imported module');\nexports.default = 99123;\n\n//# sourceURL=webpack:///./src/js/test.js?");
 
 /***/ }),
 
