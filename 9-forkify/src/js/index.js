@@ -9,6 +9,7 @@ const controlSearch = async () => {
         state.search = new Search(query);
 
         await state.search.getResults();
+        console.log(state.search.result);
     }
 }
 
