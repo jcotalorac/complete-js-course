@@ -31,6 +31,7 @@ elements.searchResPages.addEventListener('click', event => {
     
     if(btn) {
         const goToPage = parseInt(btn.dataset.goto);
+        searchView.clearResults();
         searchView.renderResults(state.search.result, goToPage);
     }
 });
