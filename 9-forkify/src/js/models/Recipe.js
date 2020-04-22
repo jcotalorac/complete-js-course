@@ -38,6 +38,8 @@ export default class Recipe {
                 ingredient = ingredient.replace(unit, unitsShort[i]);
             });
         });
+        
+        newIngredients.replace('/ *\([^])*\ */g', "");
 
         this.ingredients = newIngredients;
     }
