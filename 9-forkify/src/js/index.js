@@ -15,10 +15,15 @@ const controlSearch = async () => {
         searchView.clearResults();
         renderLoader(elements.searchRes);
 
-        await state.search.getResults();
-        
-        clearLoader();
-        searchView.renderResults(state.search.result);
+        try {
+            await state.search.getResults();
+            
+            clearLoader();
+            searchView.renderResults(state.search.result);            
+        } catch (error) {
+            alert('Something wrong with the search...');
+            clearLoader();
+        }
     }
 }
 
