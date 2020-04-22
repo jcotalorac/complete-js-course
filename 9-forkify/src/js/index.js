@@ -38,8 +38,9 @@ elements.searchResPages.addEventListener('click', event => {
     }
 });
 
-async function getRecipe() {
+function getRecipe() {
     const recipe = new Recipe('35169');
-    await recipe.getRecipe();
+    recipe.getRecipe();
+    console.log(recipe);
 }
 getRecipe();
