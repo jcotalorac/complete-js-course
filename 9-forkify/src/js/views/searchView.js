@@ -43,6 +43,10 @@ const renderRecipe = recipe => {
 
 const renderButtons = (page, numResults, resPerPage) => {
     const pages = Math.ceil(numResults / resPerPage);
+
+    if(page === 1 && pages > 1) {
+        
+    }
 }
 
 export const renderResults = (recipes, page = 1, resPerPage = 10) => {
