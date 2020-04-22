@@ -38,9 +38,8 @@ elements.searchResPages.addEventListener('click', event => {
     }
 });
 
-function getRecipe() {
-    const recipe = new Recipe('35169');
-    recipe.getRecipe();
-    console.log(recipe);
+const controlRecipe = () => {
+
 }
-getRecipe();
+
+window.addEventListener('hashchange', controlRecipe);
