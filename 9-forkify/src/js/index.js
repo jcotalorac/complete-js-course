@@ -30,7 +30,7 @@ elements.searchResPages.addEventListener('click', event => {
     const btn = event.target.closest('.btn-inline');
     
     if(btn) {
-        const goToPage = btn.dataset.goto;
-        console.log(goToPage);
+        const goToPage = parseInt(btn.dataset.goto);
+        searchView.renderResults(state.search.result, goToPage);
     }
 });
