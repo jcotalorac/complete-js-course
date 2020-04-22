@@ -47,6 +47,9 @@ export default class Recipe {
 
             let ingredientObject;
             if(unitIndex > -1) {
+
+                const arrCount = arrIng.slice(0, unitIndex);
+                
                 ingredientObject = {
                     count: parseInt(arrIng[0]),
                     unit: unitsShort[unitIndex],
