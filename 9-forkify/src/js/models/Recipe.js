@@ -42,6 +42,9 @@ export default class Recipe {
 
             ingredient = ingredient.replace(/ *\([^)]*\) */g, ' ');
 
+            const arrIng = ingredient.split(' ');
+            const unitIndex = arrIng.findIndex(element => unitsShort.includes(element));
+
             return ingredient;
         });
 
