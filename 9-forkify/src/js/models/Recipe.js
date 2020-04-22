@@ -39,7 +39,7 @@ export default class Recipe {
             });
         });
         
-        newIngredients.replace('/ *\([^])*\ */g', "");
+        ingredient = ingredient.replace(/ *\([^)]*\) */g, '');
 
         this.ingredients = newIngredients;
     }
