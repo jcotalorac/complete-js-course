@@ -41,6 +41,15 @@ const renderRecipe = recipe => {
     elements.searchResList.insertAdjacentHTML('beforeend', markup);
 }
 
+const createButton = (page, type) => `
+            <button class="btn-inline results__btn--${type}">
+                <svg class="search__icon">
+                    <use href="img/icons.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
+                </svg>
+                <span>Page ${type === 'prev' ? page - 1 : page + 1}</span>
+            </button>
+        `;
+
 const renderButtons = (page, numResults, resPerPage) => {
     const pages = Math.ceil(numResults / resPerPage);
 
