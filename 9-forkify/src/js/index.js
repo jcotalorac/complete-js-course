@@ -1,4 +1,5 @@
 import Search from './models/Search';
+import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
@@ -36,3 +37,9 @@ elements.searchResPages.addEventListener('click', event => {
         searchView.renderResults(state.search.result, goToPage);
     }
 });
+
+async function getRecipe() {
+    const recipe = new Recipe('35169');
+    await recipe.getRecipe();
+}
+getRecipe();
