@@ -45,6 +45,14 @@ export default class Recipe {
             const arrIng = ingredient.split(' ');
             const unitIndex = arrIng.findIndex(element => unitsShort.includes(element));
 
+            let ingredientObject;
+            if(unitIndex > -1) {
+                ingredientObject = {
+                    count: parseInt(arrIng[0]),
+                    unit: unitsShort[unitIndex]
+                };
+            }
+
             return ingredient;
         });
 
