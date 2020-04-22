@@ -27,5 +27,6 @@ elements.searchForm.addEventListener('submit', event => {
 });
 
 elements.searchResPages.addEventListener('click', event => {
-    console.log(event.target);
+    const btn = event.target.closest('.btn-inline');
+    console.log(btn);
 });
