@@ -64,11 +64,14 @@ const renderButtons = (page, numResults, resPerPage) => {
     } else if(page === pages && pages > 1) {
         button = createButton(page, 'prev');
     }
+
+    elements.searchResPages.insertAdjacentHTML('afterbegin', button);
 }
 
-export const renderResults = (recipes, page = 1, resPerPage = 10) => {
+export const renderResults = (recipes, page = 3, resPerPage = 10) => {
     const start = (page - 1) * resPerPage;
     const end = page * resPerPage;
 
     recipes.slice(start, end).forEach(renderRecipe);
+    renderButtons(page, recipes.length, resPerPage);
 }
