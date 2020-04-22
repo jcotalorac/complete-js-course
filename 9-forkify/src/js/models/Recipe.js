@@ -32,14 +32,18 @@ export default class Recipe {
         const unitsLong = ['tablespoons', 'tablespoon', 'ounce', 'ounces', 'teaspoon', 'teaspoons', 'cups', 'pounds'];
         const unitsShort = ['tbsp', 'tbsp', 'oz', 'oz', 'tsp', 'tsp', 'cup', 'pounds'];
         
-        const newIngredients = this.servings.map(element => {
+        const newIngredients = this.ingredients.map(element => {
+            
             let ingredient = element.toLowerCase();
+            
             unitsLong.forEach((unit, i) => {
                 ingredient = ingredient.replace(unit, unitsShort[i]);
             });
+
+            ingredient = ingredient.replace(/ *\([^)]*\) */g, '');
+
+            return ingredient;
         });
-        
-        ingredient = ingredient.replace(/ *\([^)]*\) */g, '');
 
         this.ingredients = newIngredients;
     }
