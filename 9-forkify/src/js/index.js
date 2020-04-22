@@ -6,7 +6,7 @@ import { elements, renderLoader, clearLoader } from './views/base';
 const state = {};
 
 const controlSearch = async () => {
-    const query = searchView.getInput();
+    const query = 'pizza';
 
     if (query) {
         state.search = new Search(query);
@@ -28,6 +28,11 @@ const controlSearch = async () => {
 }
 
 elements.searchForm.addEventListener('submit', event => {
+    event.preventDefault();
+    controlSearch();
+});
+
+window.addEventListener('load', event => {
     event.preventDefault();
     controlSearch();
 });
