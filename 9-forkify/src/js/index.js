@@ -39,8 +39,11 @@ elements.searchResPages.addEventListener('click', event => {
 });
 
 const controlRecipe = () => {
-    const id = window.location.hash;
-    console.log(id);
+    const id = window.location.hash.replace('#', '');
+    
+    if(id) {
+        state.recipe = new Recipe(id);
+    }
 }
 
 window.addEventListener('hashchange', controlRecipe);
