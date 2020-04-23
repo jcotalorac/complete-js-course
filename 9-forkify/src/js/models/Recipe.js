@@ -49,13 +49,16 @@ export default class Recipe {
             if(unitIndex > -1) {
 
                 const arrCount = arrIng.slice(0, unitIndex);
-                
+
                 ingredientObject = {
-                    count: parseInt(arrIng[0]),
+                    count: arrCount.reduce((sum, element) => {
+                        return sum + eval(element);
+                    }, 0),
                     unit: unitsShort[unitIndex],
                     ingredient: arrIng.slice(1).join(' ')
                 };
             }
+            console.log(ingredientObject);
 
             return ingredient;
         });
