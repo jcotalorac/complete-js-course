@@ -8,6 +8,10 @@ export const clearRecipe = () => {
 const formatCount = count => {
     if(count) {
         const [int, dec] = count.toString().split('.').map(element => parseInt(element));
+
+        if(!dec) {
+            return count;
+        }
     }
     return '?';
 };
