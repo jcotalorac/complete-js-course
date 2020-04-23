@@ -1,3 +1,5 @@
+import { elements } from './base';
+
 export const renderRecipe = recipe => {
     const markup = `
             <figure class="recipe__fig">
