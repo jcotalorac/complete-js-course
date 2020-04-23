@@ -50,10 +50,12 @@ export default class Recipe {
 
                 const arrCount = arrIng.slice(0, unitIndex);
 
+                const ingredientCount = arrCount.reduce((sum, element) => {
+                    return sum + eval(element);
+                }, 0);
+                
                 ingredientObject = {
-                    count: arrCount.reduce((sum, element) => {
-                        return sum + eval(element);
-                    }, 0),
+                    count: ingredientCount,
                     unit: unitsShort[unitIndex],
                     ingredient: arrIng.slice(1).join(' ')
                 };
