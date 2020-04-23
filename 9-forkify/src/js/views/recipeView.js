@@ -13,9 +13,13 @@ const formatCount = count => {
             return count;
         }
 
+        const fract;
         if(int === 0) {
-            const fract = new Fraction(count);
+            fract = new Fraction(count);
             return `${fract.numerator}/${fract.denominator}`;
+        } else {
+            fract = new Fraction(count - int);
+            return `${int} ${fract.numerator}/${fract.denominator}`;
         }
     }
     return '?';
