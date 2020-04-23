@@ -5,6 +5,13 @@ export const clearRecipe = () => {
     elements.recipe.innerHTML = '';
 };
 
+const formatCount = count => {
+    if(count) {
+        const [int, dec] = count.toString().split('.').map(element => parseInt(element));
+    }
+    return '?';
+};
+
 const createIngredient = ingredient => `
                                 <li class="recipe__item">
                                     <svg class="recipe__icon">
