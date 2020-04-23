@@ -13,7 +13,7 @@ const formatCount = count => {
             return count;
         }
 
-        const fract;
+        let fract;
         if(int === 0) {
             fract = new Fraction(count);
             return `${fract.numerator}/${fract.denominator}`;
@@ -30,7 +30,7 @@ const createIngredient = ingredient => `
                                     <svg class="recipe__icon">
                                         <use href="img/icons.svg#icon-check"></use>
                                     </svg>
-                                    <div class="recipe__count">${ingredient.count}</div>
+                                    <div class="recipe__count">${formatCount(ingredient.count)}</div>
                                     <div class="recipe__ingredient">
                                         <span class="recipe__unit">${ingredient.unit}</span>
                                         ${ingredient.ingredient}
