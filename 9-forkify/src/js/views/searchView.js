@@ -10,6 +10,10 @@ export const clearResults = () => {
     elements.searchResList.innerHTML = '';
 }
 
+export const highlightSelected = id => {
+    document.querySelector(`a[href=#${id}]`).classList.add('.result__link--active');
+};
+
 export const clearButtons = () => elements.searchResPages.innerHTML = '';
 
 const limitRecipeTitle = (title, limit = 17) => {
