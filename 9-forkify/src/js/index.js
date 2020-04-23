@@ -6,7 +6,7 @@ import { elements, renderLoader, clearLoader } from './views/base';
 const state = {};
 
 const controlSearch = async () => {
-    const query = 'pizza';
+    const query = searchView.getInput();
 
     if (query) {
         state.search = new Search(query);
@@ -32,11 +32,6 @@ elements.searchForm.addEventListener('submit', event => {
     controlSearch();
 });
 
-window.addEventListener('load', event => {
-    event.preventDefault();
-    controlSearch();
-});
-
 elements.searchResPages.addEventListener('click', event => {
     const btn = event.target.closest('.btn-inline');
     
@@ -53,7 +48,6 @@ const controlRecipe = async () => {
     
     if(id) {
         state.recipe = new Recipe(id);
-        window.r = state.recipe;
 
         try {
             await state.recipe.getRecipe();
