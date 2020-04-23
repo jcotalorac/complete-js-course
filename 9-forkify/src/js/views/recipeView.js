@@ -57,7 +57,7 @@ export const renderRecipe = recipe => {
             </div>
             <div class="recipe__ingredients">
                 <ul class="recipe__ingredient-list">
-                    ${recipe.ingredients.map(element => createIngredient(element))}
+                    ${recipe.ingredients.map(element => createIngredient(element)).join('')}
                     <li class="recipe__item">
                         <svg class="recipe__icon">
                             <use href="img/icons.svg#icon-check"></use>
