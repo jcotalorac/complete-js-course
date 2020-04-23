@@ -140,5 +140,5 @@ export const renderRecipe = recipe => {
                 </a>
             </div>
     `;
-    elements.recipe.insertAdjacentElement('afterbegin', markup);
+    elements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
