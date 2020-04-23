@@ -12,6 +12,11 @@ const formatCount = count => {
         if(!dec) {
             return count;
         }
+
+        if(int === 0) {
+            const fract = new Fraction(count);
+            return `${fract.numerator}/${fract.denominator}`;
+        }
     }
     return '?';
 };
