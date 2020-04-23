@@ -59,11 +59,17 @@ export default class Recipe {
                     unit: arrIng[unitIndex],
                     ingredient: arrIng.slice(unitIndex + 1).join(' ')
                 };
+            } else if(parseInt(arrIng[0])) {
+                ingredientObject = {
+                    count: parseInt(arrIng[0]),
+                    unit: '',
+                    ingredient
+                };
             } else if(unitIndex === -1) {
                 ingredientObject = {
                     count: 1,
                     unit: '',
-                    ingredient
+                    ingredient: arrIng.slice(1).join(' ')
                 };
             }
             console.log(ingredientObject);
