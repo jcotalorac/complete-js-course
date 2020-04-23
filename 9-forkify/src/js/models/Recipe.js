@@ -72,9 +72,8 @@ export default class Recipe {
                     ingredient: arrIng.slice(1).join(' ')
                 };
             }
-            console.log(ingredientObject);
 
-            return ingredient;
+            return ingredientObject;
         });
 
         this.ingredients = newIngredients;
