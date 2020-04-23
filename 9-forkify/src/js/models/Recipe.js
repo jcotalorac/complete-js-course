@@ -63,7 +63,7 @@ export default class Recipe {
                 ingredientObject = {
                     count: parseInt(arrIng[0]),
                     unit: '',
-                    ingredient
+                    ingredient: arrIng.slice(1).join(' ')
                 };
             } else if(unitIndex === -1) {
                 ingredientObject = {
