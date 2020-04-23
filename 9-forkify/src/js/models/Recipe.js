@@ -56,7 +56,7 @@ export default class Recipe {
                 
                 ingredientObject = {
                     count: ingredientCount,
-                    unit: unitsShort[unitIndex],
+                    unit: arrIng[unitIndex],
                     ingredient: arrIng.slice(1).join(' ')
                 };
             }
