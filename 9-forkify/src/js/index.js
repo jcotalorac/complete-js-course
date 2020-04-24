@@ -74,7 +74,9 @@ const controlRecipe = async () => {
 
 elements.recipe.addEventListener('click', event => {
     if(event.target.matches('.btn-decrease, .btn-decrease *')) {
-        state.recipe.updateServings('dec');
+        if(state.recipe.servings > 1) {
+            state.recipe.updateServings('dec');
+        }
     } else if(event.target.matches('.btn-increase, .btn-increase *')){
         state.recipe.updateServings('inc');
     }
