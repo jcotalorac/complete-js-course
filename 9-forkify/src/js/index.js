@@ -78,6 +78,11 @@ const controlList = () => {
     if(!state.listShopping) {
         state.listShopping = new List();
     }
+
+    state.recipe.ingredients.forEach(element => {
+        const item = state.listShopping.addItem(element.count, element.unit, element.ingredient);
+        renderItem(item);
+    });
 };
 
 elements.recipe.addEventListener('click', event => {
