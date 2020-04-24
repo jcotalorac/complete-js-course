@@ -15,4 +15,8 @@ export default class List {
 
         this.items.push(item);
     }
+
+    deleteItem(id) {
+        const index = this.items.findIndex(element => element.id === id);
+    }
 }
