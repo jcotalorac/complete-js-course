@@ -80,5 +80,5 @@ elements.recipe.addEventListener('click', event => {
     } else if(event.target.matches('.btn-increase, .btn-increase *')){
         state.recipe.updateServings('inc');
     }
-    console.log(state.recipe);
+    recipeView.updateServingsIngredients(state.recipe);
 });
