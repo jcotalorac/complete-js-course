@@ -18,5 +18,7 @@ export default class List {
 
     deleteItem(id) {
         const index = this.items.findIndex(element => element.id === id);
+
+        this.items.splice(index, 1);
     }
 }
