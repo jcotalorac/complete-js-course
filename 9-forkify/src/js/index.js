@@ -85,6 +85,10 @@ const controlList = () => {
     });
 };
 
+const controlLike = () => {
+    console.log('like');
+};
+
 elements.shopping.addEventListener('click', event => {
     const id = event.target.closest('.shopping__item').dataset.itemid;
 
@@ -108,5 +112,7 @@ elements.recipe.addEventListener('click', event => {
         recipeView.updateServingsIngredients(state.recipe);
     } else if(event.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
         controlList();
+    } else if(event.target.matches('.recipe__love, .recipe__love *')) {
+        controlLike();
     }
 });
