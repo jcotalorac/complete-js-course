@@ -100,6 +100,7 @@ const controlLike = () => {
 
         likesView.toggleLikeBtn(true);
 
+        likesView.renderLike(newLike);
     } else {
         state.likes.deleteLike(state.recipe.id);
 
