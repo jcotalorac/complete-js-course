@@ -8,3 +8,7 @@ const laptopData = JSON.parse(json);
 const server = http.createServer((request, response) => {
     console.log('Someone did access the server!');
 });
+
+server.listen(1337, '127.0.0.1', () => {
+    console.log('Listening for request now');
+});
