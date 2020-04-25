@@ -11,6 +11,7 @@ export default class Likes {
             img
         }
         this.likes.push(like);
+        this.persistData();
         return like;
     }
 
@@ -18,6 +19,7 @@ export default class Likes {
         const index = this.likes.findIndex(element => element.id === id);
 
         this.likes.splice(index, 1);
+        this.persistData();
     }
 
     isLiked(id) {
