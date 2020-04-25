@@ -5,6 +5,7 @@ import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
 import { elements, renderLoader, clearLoader } from './views/base';
+import Likes from './models/Likes';
 
 const state = {};
 
@@ -86,7 +87,9 @@ const controlList = () => {
 };
 
 const controlLike = () => {
-    console.log('like');
+    if(!state.likes) {
+        state.likes = new Likes();
+    }
 };
 
 elements.shopping.addEventListener('click', event => {
