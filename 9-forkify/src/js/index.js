@@ -98,7 +98,7 @@ const controlLike = () => {
         likesView.toggleLikeBtn(true);
 
     } else {
-        //
+        state.likes.deleteLike(state.recipe.id);
     }
     console.log(state.likes);
 };
