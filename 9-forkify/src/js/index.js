@@ -87,9 +87,6 @@ const controlList = () => {
     });
 };
 
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
-
 const controlLike = () => {
     if(!state.likes) {
         state.likes = new Likes();
@@ -109,6 +106,14 @@ const controlLike = () => {
     }
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
+
+window.addEventListener('load', event => {
+    state.likes = new Likes();
+    state.likes.readStorage();
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
+    
+    state.likes.likes.forEach(like => likesView.renderLike(like));
+});
 
 elements.shopping.addEventListener('click', event => {
     const id = event.target.closest('.shopping__item').dataset.itemid;
