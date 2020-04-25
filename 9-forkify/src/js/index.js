@@ -88,6 +88,7 @@ const controlList = () => {
 };
 
 state.likes = new Likes();
+likesView.toggleLikeMenu(state.likes.getNumLikes());
 
 const controlLike = () => {
     if(!state.likes) {
