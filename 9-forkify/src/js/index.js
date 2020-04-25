@@ -5,6 +5,7 @@ import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
+import * as likesView from './views/likesView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 const state = {};
@@ -93,6 +94,8 @@ const controlLike = () => {
 
     if(!state.likes.isLiked(state.recipe.id)) {
         const newLike = state.likes.addLikes(state.recipe.id, state.recipe.title, state.recipe.author, state.recipe.img);
+
+        likesView.toggleLikeBtn(true);
 
     } else {
         //
