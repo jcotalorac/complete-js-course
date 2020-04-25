@@ -12,16 +12,24 @@ export const toggleLikeMenu = numLikes => {
 export const renderLike = like => {
     const markup = `
             <li>
-                <a class="results__link results__link--active" href="#${like.id}">
-                    <figure class="results__fig">
+                <a class="likes__link" href="#${like.id}">
+                    <figure class="likes__fig">
                         <img src="${like.img}" alt="${like.title}">
                     </figure>
-                    <div class="results__data">
-                        <h4 class="results__name">${like.title}</h4>
-                        <p class="results__author">${like.author}</p>
+                    <div class="likes__data">
+                        <h4 class="likes__name">${like.title}</h4>
+                        <p class="likes__author">${like.author}</p>
                     </div>
                 </a>
             </li>
     `;
     elements.likesList.insertAdjacentHTML('beforeend', markup);
+};
+
+export const deleteLike = id => {
+    const likeItem = document.querySelector(`.likes__link[href*="${id}"]`).parentElement;
+
+    if(likeItem) {
+        likeItem.parentElement.removeChild(likeItem);
+    }
 };

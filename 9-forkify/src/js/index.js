@@ -105,6 +105,7 @@ const controlLike = () => {
         state.likes.deleteLike(state.recipe.id);
 
         likesView.toggleLikeBtn(false);
+        likesView.deleteLike(state.recipe.id);
     }
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
