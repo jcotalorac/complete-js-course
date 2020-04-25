@@ -1,11 +1,11 @@
 import Search from './models/Search';
 import Recipe from './models/Recipe';
 import List from './models/List';
+import Likes from './models/Likes';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
 import { elements, renderLoader, clearLoader } from './views/base';
-import Likes from './models/Likes';
 
 const state = {};
 
@@ -92,10 +92,12 @@ const controlLike = () => {
     }
 
     if(!state.likes.isLiked(state.recipe.id)) {
-        //
+        const newLike = state.likes.addLikes(state.recipe.id, state.recipe.title, state.recipe.author, state.recipe.img);
+
     } else {
         //
     }
+    console.log(state.likes);
 };
 
 elements.shopping.addEventListener('click', event => {
