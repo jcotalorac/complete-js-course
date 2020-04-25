@@ -67,7 +67,7 @@ const controlRecipe = async () => {
             state.recipe.calcServings();
 
             clearLoader();
-            recipeView.renderRecipe(state.recipe);
+            recipeView.renderRecipe(state.recipe, status.likes.isLiked(id));
         } catch (error) {
             alert('Error processing recipe!');
         }
