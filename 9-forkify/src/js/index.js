@@ -85,6 +85,12 @@ const controlList = () => {
     });
 };
 
+elements.shopping.addEventListener('click', event => {
+    if(event.target.matches('.shopping__delete, .shopping__delete *')) {
+        console.log('Delete shopping item');
+    }
+});
+
 elements.recipe.addEventListener('click', event => {
     if(event.target.matches('.btn-decrease, .btn-decrease *')) {
         if(state.recipe.servings > 1) {
