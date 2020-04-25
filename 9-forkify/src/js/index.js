@@ -90,6 +90,12 @@ const controlLike = () => {
     if(!state.likes) {
         state.likes = new Likes();
     }
+
+    if(!state.likes.isLiked(state.recipe.id)) {
+        //
+    } else {
+        //
+    }
 };
 
 elements.shopping.addEventListener('click', event => {
