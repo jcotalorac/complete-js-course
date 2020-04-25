@@ -86,7 +86,9 @@ const controlList = () => {
         listView.renderItem(item);
     });
 };
+
 state.likes = new Likes();
+
 const controlLike = () => {
     if(!state.likes) {
         state.likes = new Likes();
@@ -102,7 +104,7 @@ const controlLike = () => {
 
         likesView.toggleLikeBtn(false);
     }
-    console.log(state.likes);
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
 };
 
 elements.shopping.addEventListener('click', event => {
