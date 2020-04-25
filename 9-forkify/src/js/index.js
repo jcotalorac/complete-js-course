@@ -86,10 +86,14 @@ const controlList = () => {
 };
 
 elements.shopping.addEventListener('click', event => {
+    const id = event.target.closest('.shopping__item').dataset.itemid;
+
     if(event.target.matches('.shopping__delete, .shopping__delete *')) {
-        const id = event.target.closest('.shopping__item').dataset.itemid;
         state.listShopping.deleteItem(id);
         listView.deleteItem(id);
+    } else if (event.target.matches('.shopping__count-value')) {
+        const value = event.target.value;
+        state.listShopping.updateCount(id, value);
     }
 });
 
