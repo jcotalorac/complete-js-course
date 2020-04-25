@@ -87,7 +87,9 @@ const controlList = () => {
 
 elements.shopping.addEventListener('click', event => {
     if(event.target.matches('.shopping__delete, .shopping__delete *')) {
-        console.log('Delete shopping item');
+        const id = event.target.closest('.shopping__item').dataset.itemid;
+        state.listShopping.deleteItem(id);
+        listView.deleteItem(id);
     }
 });
 
