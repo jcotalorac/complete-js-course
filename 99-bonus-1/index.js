@@ -19,7 +19,8 @@ const server = http.createServer((request, response) => {
         response.writeHead(200, {'Content-type': 'text/html'});
         fs.readFile(`${__dirname}`/templates/template-laptopData.html, 'utf-8', (err, data) => {
             const laptop = laptopData[id];
-            let output = data.replace('{%PRODUCTNAME%}', laptop.productName).replace('{%IMAGE%}', laptop.image).replace('{%PRICE%}', laptop.price).replace('{%SCREEN%}', laptop.screen).replace('{%CPU%}', laptop.cpu).replace('{%STORAGE%}', laptop.storage).replace('{%RAM%}', laptop.ram).replace('{%DESCRIPTION%}', laptop.description);
+            let output = data.replace(/{%PRODUCTNAME%}/g, laptop.productName).replace(/{%IMAGE%}/g, laptop.image).replace(/{%PRICE%}/g, laptop.price).replace(/{%SCREEN%}/g, laptop.screen).replace(/{%CPU%}/g, laptop.cpu).replace(/{%STORAGE%}/g, laptop.storage).replace(/{%RAM%}/g, laptop.ram).replace(/{%DESCRIPTION%}/g, laptop.description);
+            response.end(output);
         });
     } else {
         response.writeHead(404, {'Content-type': 'text/html'});
