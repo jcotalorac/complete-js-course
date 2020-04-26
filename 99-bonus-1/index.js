@@ -15,9 +15,15 @@ const server = http.createServer((request, response) => {
     if(pathName === '/products' || pathName === '/') {
         response.writeHead(200, {'Content-type': 'text/html'});
         fs.readFile(`${__dirname}/templates/template-overview.html`, 'utf-8', (err, data) => {
-            const laptop = laptopData[id];
             
-            response.end(data);
+            fs.readFile(`${__dirname}/templates/template-card.html`, 'utf-8', (err, card) => {                
+
+                const cardsOutput = laptopData.map(laptop => 
+                    replaceTemplate(card, laptop)
+                ).join('');
+                
+                response.end(data.replace(/{%CARDS%}/g, cardsOutput));
+            });
         });
     } else if(pathName === '/laptop' && id < laptopData.length) {
         response.writeHead(200, {'Content-type': 'text/html'});
