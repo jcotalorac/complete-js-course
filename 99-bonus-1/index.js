@@ -32,6 +32,11 @@ const server = http.createServer((request, response) => {
             
             response.end(replaceTemplate(data, laptop));
         });
+    } else if((/\.(jpg|jpeg|png|gif)$/i).test(pathName)) {
+        fs.readFile(`${__dirname}/data/img${pathName}`, (err, data) => {
+            response.writeHead(200, { 'Content-type': 'image/jpg'});
+            response.end(data);
+        });
     } else {
         response.writeHead(404, {'Content-type': 'text/html'});
         response.end('URL was not found on the server!');
