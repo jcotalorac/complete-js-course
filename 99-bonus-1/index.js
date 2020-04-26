@@ -15,7 +15,7 @@ const server = http.createServer((request, response) => {
     if(pathName === '/products' || pathName === '/') {
         response.writeHead(200, {'Content-type': 'text/html'});
         response.end('This is the products page!');
-    } else if(pathName === '/laptop' && id < laptopData.lenght) {
+    } else if(pathName === '/laptop' && id < laptopData.length) {
         response.writeHead(200, {'Content-type': 'text/html'});
         response.end(`This is the laptop page for laptop ${id}!`);
     } else {
