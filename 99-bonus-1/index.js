@@ -18,6 +18,9 @@ const server = http.createServer((request, response) => {
     } else if(pathName === '/laptop') {
         response.writeHead(200, {'Content-type': 'text/html'});
         response.end('This is the laptop page!');
+    } else {
+        response.writeHead(404, {'Content-type': 'text/html'});
+        response.end('URL was not found on the server!');
     }
 });
 
