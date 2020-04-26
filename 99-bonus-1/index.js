@@ -18,7 +18,8 @@ const server = http.createServer((request, response) => {
     } else if(pathName === '/laptop' && id < laptopData.length) {
         response.writeHead(200, {'Content-type': 'text/html'});
         fs.readFile(`${__dirname}`/templates/template-laptopData.html, 'utf-8', (err, data) => {
-            
+            const laptop = laptopData[id];
+            let output = data.replace('{%PRODUCTNAME%}', laptop.productName).replace('{%IMAGE%}', laptop.image).replace('{%PRICE%}', laptop.price).replace('{%SCREEN%}', laptop.screen).replace('{%CPU%}', laptop.cpu).replace('{%STORAGE%}', laptop.storage).replace('{%RAM%}', laptop.ram).replace('{%DESCRIPTION%}', laptop.description);
         });
     } else {
         response.writeHead(404, {'Content-type': 'text/html'});
