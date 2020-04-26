@@ -12,9 +12,10 @@ const server = http.createServer((request, response) => {
     const pathName = query.pathname;
     console.log(pathName);
 
-    response.writeHead(404, {'Content-type': 'text/html'});
-    response.end('This is the response!');
-    console.log('Someone did access the server!');
+    if(pathName === '/products') {
+        response.writeHead(200, {'Content-type': 'text/html'});
+        response.end('This is the products page!');
+    }
 });
 
 server.listen(1337, '127.0.0.1', () => {
