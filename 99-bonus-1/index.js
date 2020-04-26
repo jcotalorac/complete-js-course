@@ -10,7 +10,8 @@ const server = http.createServer((request, response) => {
 
     const query = url.parse(request.url, true);
     const pathName = query.pathname;
-    console.log(pathName);
+    const queryParam = query.query;
+    console.log(queryParam);
 
     if(pathName === '/products' || pathName === '/') {
         response.writeHead(200, {'Content-type': 'text/html'});
