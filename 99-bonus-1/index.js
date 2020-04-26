@@ -8,7 +8,7 @@ const laptopData = JSON.parse(json);
 
 const server = http.createServer((request, response) => {
 
-    console.log(request);
+    console.log(request.url);
 
     response.writeHead(404, {'Content-type': 'text/html'});
     response.end('This is the response!');
