@@ -12,9 +12,12 @@ const server = http.createServer((request, response) => {
     const pathName = query.pathname;
     console.log(pathName);
 
-    if(pathName === '/products') {
+    if(pathName === '/products' || pathName === '/') {
         response.writeHead(200, {'Content-type': 'text/html'});
         response.end('This is the products page!');
+    } else if(pathName === '/laptop') {
+        response.writeHead(200, {'Content-type': 'text/html'});
+        response.end('This is the laptop page!');
     }
 });
 
