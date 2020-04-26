@@ -6,7 +6,7 @@ const json = fs.readFileSync(`${__dirname}/data/data.json`, 'utf-8');
 const laptopData = JSON.parse(json);
 
 const server = http.createServer((request, response) => {
-    response.writeHead(200, {'Content-type': 'text-html'});
+    response.writeHead(404, {'Content-type': 'text/html'});
     response.end('This is the response!');
     console.log('Someone did access the server!');
 });
